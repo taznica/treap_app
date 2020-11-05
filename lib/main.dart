@@ -1,4 +1,10 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+
+import 'views/account/account_view.dart';
+import 'views/reserve/reserve_view.dart';
+import 'views/search/search_view.dart';
+import 'views/ticket/ticket_view.dart';
 
 void main() {
   runApp(MyApp());
@@ -12,7 +18,69 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
-      home: Scaffold(),
+      home: HomeTabView(),
+    );
+  }
+}
+
+class HomeTabView extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return CupertinoTabScaffold(
+      tabBar: CupertinoTabBar(
+        items: const <BottomNavigationBarItem>[
+          BottomNavigationBarItem(
+            icon: Icon(CupertinoIcons.search),
+            label: 'さがす',
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(CupertinoIcons.money_yen),
+            label: 'つみたて',
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(CupertinoIcons.ticket),
+            label: 'チケット',
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(CupertinoIcons.person),
+            label: 'アカウント',
+          ),
+        ],
+      ),
+      tabBuilder: (context, index) {
+        CupertinoTabView tabView;
+        switch (index) {
+          case 0:
+            tabView = CupertinoTabView(builder: (context) {
+              return CupertinoPageScaffold(
+                child: SearchView(),
+              );
+            });
+            break;
+          case 1:
+            tabView = CupertinoTabView(builder: (context) {
+              return CupertinoPageScaffold(
+                child: ReserveView(),
+              );
+            });
+            break;
+          case 2:
+            tabView = CupertinoTabView(builder: (context) {
+              return CupertinoPageScaffold(
+                child: TicketView(),
+              );
+            });
+            break;
+          case 3:
+            tabView = CupertinoTabView(builder: (context) {
+              return CupertinoPageScaffold(
+                child: AccountView(),
+              );
+            });
+            break;
+        }
+        return tabView;
+      },
     );
   }
 }
