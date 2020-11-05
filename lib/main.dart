@@ -28,21 +28,23 @@ class HomeTabView extends StatelessWidget {
   Widget build(BuildContext context) {
     return CupertinoTabScaffold(
       tabBar: CupertinoTabBar(
+        activeColor: Colors.black87,
+        inactiveColor: Colors.black26,
         items: const <BottomNavigationBarItem>[
           BottomNavigationBarItem(
-            icon: Icon(CupertinoIcons.search),
+            icon: Icon(Icons.search),
             label: 'さがす',
           ),
           BottomNavigationBarItem(
-            icon: Icon(CupertinoIcons.money_yen),
+            icon: Icon(CupertinoIcons.money_yen_circle_fill),
             label: 'つみたて',
           ),
           BottomNavigationBarItem(
-            icon: Icon(CupertinoIcons.ticket),
+            icon: Icon(CupertinoIcons.ticket_fill),
             label: 'チケット',
           ),
           BottomNavigationBarItem(
-            icon: Icon(CupertinoIcons.person),
+            icon: Icon(CupertinoIcons.person_fill),
             label: 'アカウント',
           ),
         ],
