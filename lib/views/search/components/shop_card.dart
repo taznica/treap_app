@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:gohoubi_alpha/models/shop.dart';
+import 'package:gohoubi_app/models/shop.dart';
 
 class ShopCard extends StatelessWidget {
   final Shop shop;

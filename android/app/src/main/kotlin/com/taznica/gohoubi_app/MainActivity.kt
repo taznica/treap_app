@@ -1,4 +1,4 @@
-package com.taznica.gohoubi_alpha
+package com.taznica.gohoubi_app
 
 import io.flutter.embedding.android.FlutterActivity
 
