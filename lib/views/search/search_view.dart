@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:gohoubi_app/models/shop.dart';
 
 import 'components/shop_card.dart';
+import 'shop_detail_view.dart';
 
 class SearchView extends StatelessWidget {
   @override
@@ -25,6 +26,19 @@ class SearchView extends StatelessWidget {
           itemCount: shops.length,
           itemBuilder: (context, index) => ShopCard(
             shop: shops[index],
+            press: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (context) {
+                    return ShopDetailView(
+                      shop: shops[index],
+                    );
+                  },
+                  // fullscreenDialog: true,
+                ),
+              );
+            },
           ),
         ),
       ),
