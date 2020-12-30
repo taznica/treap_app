@@ -28,15 +28,15 @@ List<Shop> shops = [
       Ticket(
         id: 0,
         price: 5000,
-        title: 'hoge',
+        title: 'oooo',
         description: 'hoge',
         image: 'assets/images/tsukasa_shop.jpeg',
       ),
       Ticket(
         id: 1,
         price: 5000,
-        title: 'hoge',
-        description: 'hoge',
+        title: '0000',
+        description: '紬の宴会コース。120分飲み放題（ラストオーダー100分）付きです。',
         image: 'assets/images/tsukasa_shop.jpeg',
       ),
       Ticket(
@@ -118,7 +118,7 @@ List<Shop> shops = [
       Ticket(
         id: 2,
         price: 8000,
-        title: '宴会コース',
+        title: '雲宴会コース',
         description:
             '紬の宴会コース。120分飲み放題（ラストオーダー100分）付きです。ああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああ',
         image: 'assets/images/tsumugi_ticket_1.jpg',

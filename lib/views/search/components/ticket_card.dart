@@ -47,12 +47,15 @@ class TicketCard extends StatelessWidget {
                   children: [
                     Container(
                       height: 24.0,
-                      child: Text(
-                        ticket.title,
-                        style: Theme.of(context)
-                            .textTheme
-                            .subtitle1
-                            .copyWith(fontWeight: FontWeight.bold),
+                      child: Align(
+                        alignment: Alignment.bottomLeft,
+                        child: Text(
+                          ticket.title,
+                          style: Theme.of(context)
+                              .textTheme
+                              .subtitle1
+                              .copyWith(fontWeight: FontWeight.bold),
+                        ),
                       ),
                     ),
                     Container(
