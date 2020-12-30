@@ -38,7 +38,7 @@ class ShopDetailView extends StatelessWidget {
                 ),
                 background: Image.asset(
                   shop.image,
-                  fit: BoxFit.fill,
+                  fit: BoxFit.cover,
                 ),
               ),
             ),
@@ -72,7 +72,10 @@ class ShopDetailView extends StatelessWidget {
               delegate: SliverChildBuilderDelegate(
                 (context, index) {
                   return Padding(
-                    padding: const EdgeInsets.all(8.0),
+                    padding: const EdgeInsets.only(
+                      left: 4.0,
+                      right: 4.0,
+                    ),
                     child: TicketCard(
                       ticket: shop.tickets[index],
                       press: () {},

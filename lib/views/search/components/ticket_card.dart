@@ -16,41 +16,67 @@ class TicketCard extends StatelessWidget {
     return GestureDetector(
       onTap: press,
       child: Card(
-          child: Column(
-        children: [
-          Row(
-            children: <Widget>[
-              Padding(
-                padding: const EdgeInsets.all(20.0),
-                child: ClipRRect(
-                  borderRadius: BorderRadius.circular(12),
-                  child: Image.asset(
-                    ticket.image,
-                    height: 150,
-                    width: 150,
-                    fit: BoxFit.cover,
-                  ),
+        // child: Column(
+        //   children: [
+        child: Row(
+          mainAxisSize: MainAxisSize.max,
+          children: <Widget>[
+            Padding(
+              padding: const EdgeInsets.all(12.0),
+              child: ClipRRect(
+                borderRadius: BorderRadius.circular(6),
+                child: Image.asset(
+                  ticket.image,
+                  height: 100,
+                  width: 100,
+                  fit: BoxFit.cover,
                 ),
               ),
-              Expanded(
+            ),
+            // instead of Expanded comment outed
+            Expanded(
+              child: Padding(
+                padding: const EdgeInsets.only(
+                  top: 4.0,
+                  bottom: 4.0,
+                  left: 8.0,
+                  right: 8.0,
+                ),
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
-                  children: <Widget>[
-                    Text(
-                      ticket.title,
-                      style: Theme.of(context)
-                          .textTheme
-                          .headline6
-                          .copyWith(fontWeight: FontWeight.bold),
+                  children: [
+                    Container(
+                      height: 24.0,
+                      child: Text(
+                        ticket.title,
+                        style: Theme.of(context)
+                            .textTheme
+                            .subtitle1
+                            .copyWith(fontWeight: FontWeight.bold),
+                      ),
                     ),
-                    Text(ticket.description),
+                    Container(
+                      height: 60.0,
+                      child: Text(ticket.description),
+                    ),
+                    Container(
+                      alignment: Alignment.centerRight,
+                      height: 24.0,
+                      child: Text(
+                        ticket.price.toString() + '円（税込）',
+                        style: Theme.of(context)
+                            .textTheme
+                            .bodyText1
+                            .copyWith(fontWeight: FontWeight.bold),
+                      ),
+                    ),
                   ],
                 ),
               ),
-            ],
-          ),
-        ],
-      )),
+            ),
+          ],
+        ),
+      ),
     );
   }
 }
