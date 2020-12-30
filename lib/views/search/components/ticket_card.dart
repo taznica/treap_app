@@ -57,7 +57,11 @@ class TicketCard extends StatelessWidget {
                     ),
                     Container(
                       height: 60.0,
-                      child: Text(ticket.description),
+                      child: Text(
+                        ticket.description,
+                        maxLines: 3,
+                        overflow: TextOverflow.ellipsis,
+                      ),
                     ),
                     Container(
                       alignment: Alignment.centerRight,
