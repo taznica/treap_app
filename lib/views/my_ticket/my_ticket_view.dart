@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-class TicketView extends StatelessWidget {
+class MyTicketView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container();
