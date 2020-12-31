@@ -70,7 +70,7 @@ class TicketCard extends StatelessWidget {
                       alignment: Alignment.centerRight,
                       height: 24.0,
                       child: Text(
-                        ticket.price.toString() + '円（税込）',
+                        ticket.stringOfPrice(),
                         style: Theme.of(context)
                             .textTheme
                             .bodyText1

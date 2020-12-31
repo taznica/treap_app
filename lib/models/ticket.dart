@@ -9,4 +9,8 @@ class Ticket {
     this.description,
     this.image,
   });
+
+  String stringOfPrice() {
+    return this.price.toString() + '円（税込）';
+  }
 }
