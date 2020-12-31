@@ -2,6 +2,7 @@ import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:gohoubi_app/models/shop.dart';
 import 'package:gohoubi_app/views/search/components/ticket_card.dart';
+import 'package:gohoubi_app/views/ticket_detail_view.dart';
 
 class ShopDetailView extends StatelessWidget {
   final Shop shop;
@@ -78,7 +79,15 @@ class ShopDetailView extends StatelessWidget {
                     ),
                     child: TicketCard(
                       ticket: shop.tickets[index],
-                      press: () {},
+                      press: () {
+                        Navigator.push(context, MaterialPageRoute(
+                          builder: (context) {
+                            return TicketDetailView(
+                              ticket: shop.tickets[index],
+                            );
+                          },
+                        ));
+                      },
                     ),
                   );
                 },
