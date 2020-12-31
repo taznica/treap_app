@@ -83,6 +83,7 @@ class ShopDetailView extends StatelessWidget {
                         Navigator.push(context, MaterialPageRoute(
                           builder: (context) {
                             return TicketDetailView(
+                              shop: shop,
                               ticket: shop.tickets[index],
                             );
                           },

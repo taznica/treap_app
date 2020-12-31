@@ -1,11 +1,14 @@
 import 'package:flutter/material.dart';
+import 'package:gohoubi_app/models/shop.dart';
 import 'package:gohoubi_app/models/ticket.dart';
 
 class TicketDetailView extends StatefulWidget {
+  final Shop shop;
   final Ticket ticket;
 
   const TicketDetailView({
     Key key,
+    this.shop,
     this.ticket,
   }) : super(key: key);
 
@@ -22,6 +25,13 @@ class _TicketDetailViewState extends State<TicketDetailView> {
 
     return Scaffold(
       appBar: AppBar(
+        title: Text(
+          widget.shop.name,
+          style: TextStyle(
+            color: Colors.black87,
+            fontWeight: FontWeight.bold,
+          ),
+        ),
         iconTheme: IconThemeData(
           color: Colors.black87,
         ),
