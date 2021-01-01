@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:gohoubi_app/models/user.dart';
 
-import 'components/AccountListTile.dart';
-import 'components/ProfileImage.dart';
-import 'components/ProfileName.dart';
+import 'components/account_list_tile.dart';
+import 'components/profile_image.dart';
+import 'components/profile_name.dart';
 
 class AccountView extends StatelessWidget {
   @override
