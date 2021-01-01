@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:gohoubi_app/components/top_app_bar.dart';
 import 'package:gohoubi_app/models/user.dart';
 
 import '../../components/account_list_tile.dart';
@@ -9,17 +10,8 @@ class AccountView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: Text(
-          'アカウント',
-          style: TextStyle(
-            color: Colors.black87,
-            fontWeight: FontWeight.bold,
-          ),
-        ),
-        centerTitle: true,
-        backgroundColor: Colors.white.withOpacity(0),
-        elevation: 0,
+      appBar: TopAppBar(
+        title: 'アカウント',
       ),
       body: Padding(
         padding: const EdgeInsets.all(4.0),
