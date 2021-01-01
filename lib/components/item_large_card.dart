@@ -45,7 +45,7 @@ class ItemLargeCard extends StatelessWidget {
             ),
             Text(
               item.description,
-              maxLines: 5,
+              maxLines: 4,
               overflow: TextOverflow.ellipsis,
             ),
             Padding(

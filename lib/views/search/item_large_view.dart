@@ -38,7 +38,7 @@ class ItemLargeView extends StatelessWidget {
           children: [
             ItemLargeCard(item: item),
             Padding(
-              padding: const EdgeInsets.only(top: 40.0),
+              padding: const EdgeInsets.only(top: 16.0),
               child: TsumitateMenu(item: item),
             ),
           ],
