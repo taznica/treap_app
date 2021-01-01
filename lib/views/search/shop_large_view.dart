@@ -1,15 +1,15 @@
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:gohoubi_app/models/shop.dart';
-import 'package:gohoubi_app/views/item_detail_view.dart';
-import 'package:gohoubi_app/views/search/components/item_card.dart';
+import 'package:gohoubi_app/views/search/components/item_small_card.dart';
+import 'package:gohoubi_app/views/search/item_large_view.dart';
 
 import 'components/shop_info.dart';
 
-class ShopDetailView extends StatelessWidget {
+class ShopLargeView extends StatelessWidget {
   final Shop shop;
 
-  const ShopDetailView({
+  const ShopLargeView({
     Key key,
     this.shop,
   }) : super(key: key);
@@ -55,12 +55,12 @@ class ShopDetailView extends StatelessWidget {
             SliverList(
               delegate: SliverChildBuilderDelegate(
                 (context, index) {
-                  return ItemCard(
+                  return ItemSmallCard(
                     item: shop.items[index],
                     press: () {
                       Navigator.push(context, MaterialPageRoute(
                         builder: (context) {
-                          return ItemDetailView(
+                          return ItemLargeView(
                             shop: shop,
                             item: shop.items[index],
                           );

@@ -2,21 +2,21 @@ import 'package:flutter/material.dart';
 import 'package:gohoubi_app/models/item.dart';
 import 'package:gohoubi_app/models/shop.dart';
 
-class ItemDetailView extends StatefulWidget {
+class ItemLargeView extends StatefulWidget {
   final Shop shop;
   final Item item;
 
-  const ItemDetailView({
+  const ItemLargeView({
     Key key,
     this.shop,
     this.item,
   }) : super(key: key);
 
   @override
-  _TicketDetailViewState createState() => _TicketDetailViewState();
+  _ItemLargeViewState createState() => _ItemLargeViewState();
 }
 
-class _TicketDetailViewState extends State<ItemDetailView> {
+class _ItemLargeViewState extends State<ItemLargeView> {
   double _sliderValue = 50.0;
 
   @override

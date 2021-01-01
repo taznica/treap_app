@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:gohoubi_app/models/shop.dart';
 
-class ShopCard extends StatelessWidget {
+class ShopSmallCard extends StatelessWidget {
   final Shop shop;
   final Function press;
 
-  const ShopCard({
+  const ShopSmallCard({
     Key key,
     this.shop,
     this.press,

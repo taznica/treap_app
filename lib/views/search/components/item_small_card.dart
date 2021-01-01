@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:gohoubi_app/models/item.dart';
 
-class ItemCard extends StatelessWidget {
+class ItemSmallCard extends StatelessWidget {
   final Item item;
   final Function press;
 
-  const ItemCard({
+  const ItemSmallCard({
     Key key,
     this.item,
     this.press,

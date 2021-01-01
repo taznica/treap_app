@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:gohoubi_app/models/shop.dart';
 
-import 'components/shop_card.dart';
-import 'shop_detail_view.dart';
+import 'components/shop_small_card.dart';
+import 'shop_large_view.dart';
 
 class SearchView extends StatelessWidget {
   @override
@@ -24,14 +24,14 @@ class SearchView extends StatelessWidget {
         padding: const EdgeInsets.all(8.0),
         child: ListView.builder(
           itemCount: shops.length,
-          itemBuilder: (context, index) => ShopCard(
+          itemBuilder: (context, index) => ShopSmallCard(
             shop: shops[index],
             press: () {
               Navigator.push(
                 context,
                 MaterialPageRoute(
                   builder: (context) {
-                    return ShopDetailView(
+                    return ShopLargeView(
                       shop: shops[index],
                     );
                   },
