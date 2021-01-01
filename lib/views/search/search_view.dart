@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:gohoubi_app/models/shop.dart';
 
-import 'components/shop_small_card.dart';
+import '../../components/shop_small_card.dart';
 import 'shop_large_view.dart';
 
 class SearchView extends StatelessWidget {

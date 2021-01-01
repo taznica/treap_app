@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:gohoubi_app/components/tsumitate_menu.dart';
 import 'package:gohoubi_app/models/item.dart';
 import 'package:gohoubi_app/models/shop.dart';
-import 'package:gohoubi_app/views/search/components/tsumitate_menu.dart';
 
-import 'components/item_large_card.dart';
+import '../../components/item_large_card.dart';
 
 class ItemLargeView extends StatelessWidget {
   final Shop shop;
