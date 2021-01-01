@@ -4,6 +4,8 @@ import 'package:gohoubi_app/models/shop.dart';
 import 'package:gohoubi_app/views/item_detail_view.dart';
 import 'package:gohoubi_app/views/search/components/item_card.dart';
 
+import 'components/shop_info.dart';
+
 class ShopDetailView extends StatelessWidget {
   final Shop shop;
 
@@ -46,26 +48,7 @@ class ShopDetailView extends StatelessWidget {
             SliverList(
               delegate: SliverChildListDelegate(
                 [
-                  Padding(
-                    padding: const EdgeInsets.all(8.0),
-                    child: Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        Text(
-                          shop.type,
-                          style: Theme.of(context).textTheme.bodyText1,
-                        ),
-                        Text(
-                          shop.address,
-                          style: Theme.of(context).textTheme.bodyText1,
-                        ),
-                        Text(
-                          shop.url,
-                          style: Theme.of(context).textTheme.bodyText1,
-                        ),
-                      ],
-                    ),
-                  ),
+                  ShopInfo(shop: shop),
                 ],
               ),
             ),
