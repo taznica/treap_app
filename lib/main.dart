@@ -2,9 +2,9 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 import 'views/account/account_view.dart';
-import 'views/my_ticket/my_ticket_view.dart';
 import 'views/reserve/reserve_view.dart';
 import 'views/search/search_view.dart';
+import 'views/ticket/ticket_view.dart';
 
 void main() {
   runApp(MyApp());
@@ -69,7 +69,7 @@ class HomeTabView extends StatelessWidget {
           case 2:
             tabView = CupertinoTabView(builder: (context) {
               return CupertinoPageScaffold(
-                child: MyTicketView(),
+                child: TicketView(),
               );
             });
             break;

@@ -1,9 +1,9 @@
-import 'package:gohoubi_app/models/ticket.dart';
+import 'package:gohoubi_app/models/item.dart';
 
 class Shop {
   final int id;
   final String type, name, image, address, url;
-  final List<Ticket> tickets;
+  final List<Item> items;
 
   Shop({
     this.id,
@@ -12,7 +12,7 @@ class Shop {
     this.image,
     this.address,
     this.url,
-    this.tickets,
+    this.items,
   });
 }
 
@@ -24,29 +24,29 @@ List<Shop> shops = [
     image: 'assets/images/tsukasa_shop.jpeg',
     address: '宮城県仙台青葉区',
     url: 'https://tabelog.com/miyagi/A0401/A040101/4018920/',
-    tickets: [
-      Ticket(
+    items: [
+      Item(
         id: 0,
         price: 5000,
         title: 'oooo',
         description: 'hoge',
         image: 'assets/images/tsukasa_shop.jpeg',
       ),
-      Ticket(
+      Item(
         id: 1,
         price: 5000,
         title: '0000',
         description: '紬の宴会コース。120分飲み放題（ラストオーダー100分）付きです。',
         image: 'assets/images/tsukasa_shop.jpeg',
       ),
-      Ticket(
+      Item(
         id: 2,
         price: 5000,
         title: 'hoge',
         description: 'hoge',
         image: 'assets/images/tsukasa_shop.jpeg',
       ),
-      Ticket(
+      Item(
         id: 3,
         price: 5000,
         title: 'hoge',
@@ -62,29 +62,29 @@ List<Shop> shops = [
     image: 'assets/images/goshuinsen_shop.jpeg',
     address: '宮城県仙台青葉区',
     url: 'https://tabelog.com/miyagi/A0401/A040101/4000613/',
-    tickets: [
-      Ticket(
+    items: [
+      Item(
         id: 0,
         price: 5000,
         title: 'hoge',
         description: 'hoge',
         image: 'assets/images/goshuinsen_shop.jpeg',
       ),
-      Ticket(
+      Item(
         id: 1,
         price: 5000,
         title: 'hoge',
         description: 'hoge',
         image: 'assets/images/goshuinsen_shop.jpeg',
       ),
-      Ticket(
+      Item(
         id: 2,
         price: 5000,
         title: 'hoge',
         description: 'hoge',
         image: 'assets/images/goshuinsen_shop.jpeg',
       ),
-      Ticket(
+      Item(
         id: 3,
         price: 5000,
         title: 'hoge',
@@ -100,22 +100,22 @@ List<Shop> shops = [
     image: 'assets/images/tsumugi_shop.jpg',
     address: '宮城県仙台青葉区',
     url: 'https://www.1noi.jp/%E7%B4%AC',
-    tickets: [
-      Ticket(
+    items: [
+      Item(
         id: 0,
         price: 5000,
         title: '宴会コース',
         description: '紬の宴会コース。120分飲み放題（ラストオーダー100分）付きです。',
         image: 'assets/images/tsumugi_ticket_1.jpg',
       ),
-      Ticket(
+      Item(
         id: 1,
         price: 6500,
         title: '宴会コース',
         description: '紬の宴会コース。120分飲み放題（ラストオーダー100分）付きです。',
         image: 'assets/images/tsumugi_ticket_1.jpg',
       ),
-      Ticket(
+      Item(
         id: 2,
         price: 8000,
         title: '雲宴会コース',
@@ -132,29 +132,29 @@ List<Shop> shops = [
     image: 'assets/images/goshuinsen_shop.jpeg',
     address: '宮城県仙台青葉区',
     url: 'https://tabelog.com/miyagi/A0401/A040101/4000613/',
-    tickets: [
-      Ticket(
+    items: [
+      Item(
         id: 0,
         price: 5000,
         title: 'hoge',
         description: 'hoge',
         image: 'assets/images/goshuinsen_shop.jpeg',
       ),
-      Ticket(
+      Item(
         id: 1,
         price: 5000,
         title: 'hoge',
         description: 'hoge',
         image: 'assets/images/goshuinsen_shop.jpeg',
       ),
-      Ticket(
+      Item(
         id: 2,
         price: 5000,
         title: 'hoge',
         description: 'hoge',
         image: 'assets/images/goshuinsen_shop.jpeg',
       ),
-      Ticket(
+      Item(
         id: 3,
         price: 5000,
         title: 'hoge',
@@ -170,29 +170,29 @@ List<Shop> shops = [
     image: 'assets/images/agu_shop.jpeg',
     address: '宮城県仙台市青葉区',
     url: 'https://beauty.hotpepper.jp/slnH000341560/',
-    tickets: [
-      Ticket(
+    items: [
+      Item(
         id: 0,
         price: 5000,
         title: 'hoge',
         description: 'hoge',
         image: 'assets/images/agu_shop.jpeg',
       ),
-      Ticket(
+      Item(
         id: 1,
         price: 5000,
         title: 'hoge',
         description: 'hoge',
         image: 'assets/images/agu_shop.jpeg',
       ),
-      Ticket(
+      Item(
         id: 2,
         price: 5000,
         title: 'hoge',
         description: 'hoge',
         image: 'assets/images/agu_shop.jpeg',
       ),
-      Ticket(
+      Item(
         id: 3,
         price: 5000,
         title: 'hoge',
@@ -208,29 +208,29 @@ List<Shop> shops = [
     image: 'assets/images/raffine_shop.jpeg',
     address: '宮城県仙台市青葉区',
     url: 'https://beauty.hotpepper.jp/kr/slnH000142354/',
-    tickets: [
-      Ticket(
+    items: [
+      Item(
         id: 0,
         price: 5000,
         title: 'hoge',
         description: 'hoge',
         image: 'assets/images/raffine_shop.jpeg',
       ),
-      Ticket(
+      Item(
         id: 1,
         price: 5000,
         title: 'hoge',
         description: 'hoge',
         image: 'assets/images/raffine_shop.jpeg',
       ),
-      Ticket(
+      Item(
         id: 2,
         price: 5000,
         title: 'hoge',
         description: 'hoge',
         image: 'assets/images/raffine_shop.jpeg',
       ),
-      Ticket(
+      Item(
         id: 3,
         price: 5000,
         title: 'hoge',

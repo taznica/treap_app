@@ -1,27 +1,27 @@
 import 'package:flutter/material.dart';
+import 'package:gohoubi_app/models/item.dart';
 import 'package:gohoubi_app/models/shop.dart';
-import 'package:gohoubi_app/models/ticket.dart';
 
-class TicketDetailView extends StatefulWidget {
+class ItemDetailView extends StatefulWidget {
   final Shop shop;
-  final Ticket ticket;
+  final Item item;
 
-  const TicketDetailView({
+  const ItemDetailView({
     Key key,
     this.shop,
-    this.ticket,
+    this.item,
   }) : super(key: key);
 
   @override
   _TicketDetailViewState createState() => _TicketDetailViewState();
 }
 
-class _TicketDetailViewState extends State<TicketDetailView> {
+class _TicketDetailViewState extends State<ItemDetailView> {
   double _sliderValue = 50.0;
 
   @override
   Widget build(BuildContext context) {
-    int pricePerDay = (widget.ticket.price / _sliderValue).ceil();
+    int pricePerDay = (widget.item.price / _sliderValue).ceil();
 
     return Scaffold(
       appBar: AppBar(
@@ -53,7 +53,7 @@ class _TicketDetailViewState extends State<TicketDetailView> {
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     Text(
-                      widget.ticket.title,
+                      widget.item.title,
                       style: Theme.of(context)
                           .textTheme
                           .headline6
@@ -66,7 +66,7 @@ class _TicketDetailViewState extends State<TicketDetailView> {
                         child: ClipRRect(
                           borderRadius: BorderRadius.circular(6),
                           child: Image.asset(
-                            widget.ticket.image,
+                            widget.item.image,
                             height: 240,
                             width: 240,
                             fit: BoxFit.cover,
@@ -75,7 +75,7 @@ class _TicketDetailViewState extends State<TicketDetailView> {
                       ),
                     ),
                     Text(
-                      widget.ticket.description,
+                      widget.item.description,
                       maxLines: 5,
                       overflow: TextOverflow.ellipsis,
                     ),
@@ -84,7 +84,7 @@ class _TicketDetailViewState extends State<TicketDetailView> {
                       child: Align(
                         alignment: Alignment.centerRight,
                         child: Text(
-                          widget.ticket.stringOfPrice(),
+                          widget.item.stringOfPrice(),
                           style: Theme.of(context)
                               .textTheme
                               .subtitle1

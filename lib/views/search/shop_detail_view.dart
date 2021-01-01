@@ -1,8 +1,8 @@
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:gohoubi_app/models/shop.dart';
-import 'package:gohoubi_app/views/search/components/ticket_card.dart';
-import 'package:gohoubi_app/views/ticket_detail_view.dart';
+import 'package:gohoubi_app/views/item_detail_view.dart';
+import 'package:gohoubi_app/views/search/components/item_card.dart';
 
 class ShopDetailView extends StatelessWidget {
   final Shop shop;
@@ -77,14 +77,14 @@ class ShopDetailView extends StatelessWidget {
                       left: 4.0,
                       right: 4.0,
                     ),
-                    child: TicketCard(
-                      ticket: shop.tickets[index],
+                    child: ItemCard(
+                      item: shop.items[index],
                       press: () {
                         Navigator.push(context, MaterialPageRoute(
                           builder: (context) {
-                            return TicketDetailView(
+                            return ItemDetailView(
                               shop: shop,
-                              ticket: shop.tickets[index],
+                              item: shop.items[index],
                             );
                           },
                         ));
@@ -92,7 +92,7 @@ class ShopDetailView extends StatelessWidget {
                     ),
                   );
                 },
-                childCount: shop.tickets.length,
+                childCount: shop.items.length,
               ),
             ),
           ],

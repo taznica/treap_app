@@ -1,8 +1,8 @@
-class Ticket {
+class Item {
   final int id, price;
   final String title, description, image;
 
-  Ticket({
+  Item({
     this.id,
     this.price,
     this.title,

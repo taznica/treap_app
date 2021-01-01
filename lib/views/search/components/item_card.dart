@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
-import 'package:gohoubi_app/models/ticket.dart';
+import 'package:gohoubi_app/models/item.dart';
 
-class TicketCard extends StatelessWidget {
-  final Ticket ticket;
+class ItemCard extends StatelessWidget {
+  final Item item;
   final Function press;
 
-  const TicketCard({
+  const ItemCard({
     Key key,
-    this.ticket,
+    this.item,
     this.press,
   }) : super(key: key);
 
@@ -26,7 +26,7 @@ class TicketCard extends StatelessWidget {
               child: ClipRRect(
                 borderRadius: BorderRadius.circular(6),
                 child: Image.asset(
-                  ticket.image,
+                  item.image,
                   height: 100,
                   width: 100,
                   fit: BoxFit.cover,
@@ -50,7 +50,7 @@ class TicketCard extends StatelessWidget {
                       child: Align(
                         alignment: Alignment.bottomLeft,
                         child: Text(
-                          ticket.title,
+                          item.title,
                           style: Theme.of(context)
                               .textTheme
                               .subtitle1
@@ -61,7 +61,7 @@ class TicketCard extends StatelessWidget {
                     Container(
                       height: 60.0,
                       child: Text(
-                        ticket.description,
+                        item.description,
                         maxLines: 3,
                         overflow: TextOverflow.ellipsis,
                       ),
@@ -70,7 +70,7 @@ class TicketCard extends StatelessWidget {
                       alignment: Alignment.centerRight,
                       height: 24.0,
                       child: Text(
-                        ticket.stringOfPrice(),
+                        item.stringOfPrice(),
                         style: Theme.of(context)
                             .textTheme
                             .bodyText1
