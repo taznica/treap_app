@@ -1,8 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:gohoubi_app/models/item.dart';
 import 'package:gohoubi_app/models/shop.dart';
+import 'package:gohoubi_app/views/search/components/tsumitate_menu.dart';
 
-class ItemLargeView extends StatefulWidget {
+import 'components/item_large_card.dart';
+
+class ItemLargeView extends StatelessWidget {
   final Shop shop;
   final Item item;
 
@@ -13,20 +16,11 @@ class ItemLargeView extends StatefulWidget {
   }) : super(key: key);
 
   @override
-  _ItemLargeViewState createState() => _ItemLargeViewState();
-}
-
-class _ItemLargeViewState extends State<ItemLargeView> {
-  double _sliderValue = 50.0;
-
-  @override
   Widget build(BuildContext context) {
-    int pricePerDay = (widget.item.price / _sliderValue).ceil();
-
     return Scaffold(
       appBar: AppBar(
         title: Text(
-          widget.shop.name,
+          shop.name,
           style: TextStyle(
             color: Colors.black87,
             fontWeight: FontWeight.bold,
@@ -42,109 +36,10 @@ class _ItemLargeViewState extends State<ItemLargeView> {
         padding: const EdgeInsets.all(16.0),
         child: Column(
           children: [
-            Container(
-              decoration: BoxDecoration(
-                border: Border.all(color: Colors.amber),
-                borderRadius: BorderRadius.circular(6),
-              ),
-              child: Padding(
-                padding: const EdgeInsets.all(16.0),
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    Text(
-                      widget.item.title,
-                      style: Theme.of(context)
-                          .textTheme
-                          .headline6
-                          .copyWith(fontWeight: FontWeight.bold),
-                    ),
-                    Container(
-                      alignment: Alignment.center,
-                      child: Padding(
-                        padding: const EdgeInsets.all(16.0),
-                        child: ClipRRect(
-                          borderRadius: BorderRadius.circular(6),
-                          child: Image.asset(
-                            widget.item.image,
-                            height: 240,
-                            width: 240,
-                            fit: BoxFit.cover,
-                          ),
-                        ),
-                      ),
-                    ),
-                    Text(
-                      widget.item.description,
-                      maxLines: 5,
-                      overflow: TextOverflow.ellipsis,
-                    ),
-                    Padding(
-                      padding: const EdgeInsets.only(top: 8.0),
-                      child: Align(
-                        alignment: Alignment.centerRight,
-                        child: Text(
-                          widget.item.stringOfPrice(),
-                          style: Theme.of(context)
-                              .textTheme
-                              .subtitle1
-                              .copyWith(fontWeight: FontWeight.bold),
-                        ),
-                      ),
-                    ),
-                    Padding(
-                      padding: const EdgeInsets.only(top: 16.0),
-                      child: Row(
-                        children: [
-                          Slider(
-                              value: _sliderValue,
-                              min: 50,
-                              max: 500,
-                              divisions: 45,
-                              label: '1日あたり' +
-                                  _sliderValue.round().toString() +
-                                  '円',
-                              activeColor: Colors.amber,
-                              onChanged: (double value) {
-                                setState(() {
-                                  _sliderValue = value.roundToDouble();
-                                });
-                              }),
-                          Text('獲得まで' + pricePerDay.toString() + '日'),
-                        ],
-                      ),
-                    ),
-                  ],
-                ),
-              ),
-            ),
-            Container(
-              margin: const EdgeInsets.only(top: 24),
-            ),
+            ItemLargeCard(item: item),
             Padding(
-              padding: const EdgeInsets.only(
-                left: 64.0,
-                right: 64.0,
-              ),
-              child: FlatButton(
-                onPressed: () {},
-                color: Colors.amber,
-                splashColor: Colors.amberAccent,
-                shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(8.0),
-                ),
-                height: 50,
-                minWidth: 200,
-                child: Align(
-                  child: Text(
-                    '積立をはじめる',
-                    style: Theme.of(context).textTheme.subtitle1.copyWith(
-                          color: Colors.white,
-                          fontWeight: FontWeight.bold,
-                        ),
-                  ),
-                ),
-              ),
+              padding: const EdgeInsets.only(top: 40.0),
+              child: TsumitateMenu(item: item),
             ),
           ],
         ),
