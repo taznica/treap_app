@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:gohoubi_app/models/ticket.dart';
-import 'package:gohoubi_app/views/ticket/ticket_large_card.dart';
-import 'package:gohoubi_app/views/ticket/ticket_use_menu.dart';
+import 'package:gohoubi_app/views/ticket/components/ticket_large_card.dart';
+import 'package:gohoubi_app/views/ticket/components/ticket_use_menu.dart';
 
 class TicketLargeView extends StatelessWidget {
   final Ticket ticket;

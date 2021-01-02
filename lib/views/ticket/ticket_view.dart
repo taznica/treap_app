@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:gohoubi_app/components/top_app_bar.dart';
 import 'package:gohoubi_app/models/user.dart';
-import 'package:gohoubi_app/views/ticket/ticket_large_view.dart';
 
-import 'ticket_small_card.dart';
+import 'components/ticket_large_view.dart';
+import 'components/ticket_small_card.dart';
 
 class TicketView extends StatelessWidget {
   @override
