@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:gohoubi_app/components/item_small_card.dart';
 import 'package:gohoubi_app/components/top_app_bar.dart';
 import 'package:gohoubi_app/models/user.dart';
+import 'package:gohoubi_app/views/ticket/ticket_large_view.dart';
+
+import 'ticket_small_card.dart';
 
 class TicketView extends StatelessWidget {
   @override
@@ -12,9 +14,15 @@ class TicketView extends StatelessWidget {
       ),
       body: ListView.builder(
         itemBuilder: (context, index) {
-          return ItemSmallCard(
-            item: user.tickets[index].item,
-            press: () {},
+          return TicketSmallCard(
+            ticket: user.tickets[index],
+            press: () {
+              Navigator.push(context, MaterialPageRoute(
+                builder: (context) {
+                  return TicketLargeView(ticket: user.tickets[index]);
+                },
+              ));
+            },
           );
         },
         itemCount: user.tickets.length,
