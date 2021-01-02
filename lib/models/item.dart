@@ -1,6 +1,9 @@
+import 'shop.dart';
+
 class Item {
   final int id, price;
   final String title, description, image;
+  final Shop shop;
 
   Item({
     this.id,
@@ -8,6 +11,7 @@ class Item {
     this.title,
     this.description,
     this.image,
+    this.shop,
   });
 
   String stringOfPrice() {
