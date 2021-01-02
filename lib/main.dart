@@ -30,6 +30,7 @@ class HomeTabView extends StatefulWidget {
 
 class _HomeTabViewState extends State<HomeTabView> {
   int currentIndex = 0;
+
   final List<Widget> views = [
     SearchView(),
     ReserveView(),
