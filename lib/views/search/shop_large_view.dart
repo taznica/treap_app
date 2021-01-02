@@ -16,64 +16,57 @@ class ShopLargeView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return WillPopScope(
-      onWillPop: () async {
-        return Future.value(true);
-      },
-      child: Container(
-        padding: const EdgeInsets.only(
-          bottom: 80.0,
-        ),
-        child: CustomScrollView(
-          slivers: <Widget>[
-            SliverAppBar(
-              pinned: true,
-              floating: false,
-              expandedHeight: 400,
-              backgroundColor: Colors.transparent,
-              flexibleSpace: FlexibleSpaceBar(
-                title: Text(
-                  shop.name,
-                  style: TextStyle(
-                    color: Colors.white,
-                    fontWeight: FontWeight.bold,
-                  ),
-                ),
-                background: Image.asset(
-                  shop.image,
-                  fit: BoxFit.cover,
+    return Container(
+      color: Colors.white,
+      child: CustomScrollView(
+        slivers: <Widget>[
+          SliverAppBar(
+            pinned: true,
+            floating: false,
+            expandedHeight: 400,
+            backgroundColor: Colors.transparent,
+            flexibleSpace: FlexibleSpaceBar(
+              title: Text(
+                shop.name,
+                style: TextStyle(
+                  color: Colors.white,
+                  fontWeight: FontWeight.bold,
                 ),
               ),
-            ),
-            SliverList(
-              delegate: SliverChildListDelegate(
-                [
-                  ShopInfo(shop: shop),
-                ],
+              background: Image.asset(
+                shop.image,
+                fit: BoxFit.cover,
               ),
             ),
-            SliverList(
-              delegate: SliverChildBuilderDelegate(
-                (context, index) {
-                  return ItemSmallCard(
-                    item: shop.items[index],
-                    press: () {
-                      Navigator.push(context, MaterialPageRoute(
-                        builder: (context) {
-                          return ItemLargeView(
-                            shop: shop,
-                            item: shop.items[index],
-                          );
-                        },
-                      ));
-                    },
-                  );
-                },
-                childCount: shop.items.length,
-              ),
+          ),
+          SliverList(
+            delegate: SliverChildListDelegate(
+              [
+                ShopInfo(shop: shop),
+              ],
             ),
-          ],
-        ),
+          ),
+          SliverList(
+            delegate: SliverChildBuilderDelegate(
+              (context, index) {
+                return ItemSmallCard(
+                  item: shop.items[index],
+                  press: () {
+                    Navigator.push(context, MaterialPageRoute(
+                      builder: (context) {
+                        return ItemLargeView(
+                          shop: shop,
+                          item: shop.items[index],
+                        );
+                      },
+                    ));
+                  },
+                );
+              },
+              childCount: shop.items.length,
+            ),
+          ),
+        ],
       ),
     );
   }

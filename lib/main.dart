@@ -23,66 +23,59 @@ class MyApp extends StatelessWidget {
   }
 }
 
-class HomeTabView extends StatelessWidget {
+class HomeTabView extends StatefulWidget {
+  @override
+  _HomeTabViewState createState() => _HomeTabViewState();
+}
+
+class _HomeTabViewState extends State<HomeTabView> {
+  int currentIndex = 0;
+  final List<Widget> views = [
+    SearchView(),
+    ReserveView(),
+    TicketView(),
+    AccountView(),
+  ];
+
+  final List<BottomNavigationBarItem> barItems = [
+    BottomNavigationBarItem(
+      icon: Icon(Icons.search),
+      label: 'さがす',
+    ),
+    BottomNavigationBarItem(
+      icon: Icon(CupertinoIcons.money_yen_circle_fill),
+      label: 'つみたて',
+    ),
+    BottomNavigationBarItem(
+      icon: Icon(CupertinoIcons.ticket_fill),
+      label: 'チケット',
+    ),
+    BottomNavigationBarItem(
+      icon: Icon(CupertinoIcons.person_fill),
+      label: 'アカウント',
+    ),
+  ];
+
   @override
   Widget build(BuildContext context) {
-    return CupertinoTabScaffold(
-      tabBar: CupertinoTabBar(
-        activeColor: Colors.black87,
-        inactiveColor: Colors.black26,
-        items: const <BottomNavigationBarItem>[
-          BottomNavigationBarItem(
-            icon: Icon(Icons.search),
-            label: 'さがす',
-          ),
-          BottomNavigationBarItem(
-            icon: Icon(CupertinoIcons.money_yen_circle_fill),
-            label: 'つみたて',
-          ),
-          BottomNavigationBarItem(
-            icon: Icon(CupertinoIcons.ticket_fill),
-            label: 'チケット',
-          ),
-          BottomNavigationBarItem(
-            icon: Icon(CupertinoIcons.person_fill),
-            label: 'アカウント',
-          ),
-        ],
+    return Scaffold(
+      body: views[currentIndex],
+      bottomNavigationBar: BottomNavigationBar(
+        currentIndex: currentIndex,
+        type: BottomNavigationBarType.fixed,
+        selectedItemColor: Colors.amber,
+        unselectedItemColor: Colors.black87,
+        selectedFontSize: 12.0, // same as unselectedFontSize
+        selectedLabelStyle: TextStyle(fontWeight: FontWeight.bold),
+        unselectedLabelStyle: TextStyle(fontWeight: FontWeight.bold),
+        showUnselectedLabels: true,
+        items: barItems,
+        onTap: (index) {
+          setState(() {
+            currentIndex = index;
+          });
+        },
       ),
-      tabBuilder: (context, index) {
-        CupertinoTabView tabView;
-        switch (index) {
-          case 0:
-            tabView = CupertinoTabView(builder: (context) {
-              return CupertinoPageScaffold(
-                child: SearchView(),
-              );
-            });
-            break;
-          case 1:
-            tabView = CupertinoTabView(builder: (context) {
-              return CupertinoPageScaffold(
-                child: ReserveView(),
-              );
-            });
-            break;
-          case 2:
-            tabView = CupertinoTabView(builder: (context) {
-              return CupertinoPageScaffold(
-                child: TicketView(),
-              );
-            });
-            break;
-          case 3:
-            tabView = CupertinoTabView(builder: (context) {
-              return CupertinoPageScaffold(
-                child: AccountView(),
-              );
-            });
-            break;
-        }
-        return tabView;
-      },
     );
   }
 }
