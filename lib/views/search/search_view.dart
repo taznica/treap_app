@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:gohoubi_app/components/top_app_bar.dart';
 import 'package:gohoubi_app/models/shop.dart';
 
 import 'components/shop_small_card.dart';
@@ -9,9 +8,6 @@ class SearchView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: TopAppBar(
-        title: 'さがす',
-      ),
       body: Container(
         padding: const EdgeInsets.only(
           left: 8.0,

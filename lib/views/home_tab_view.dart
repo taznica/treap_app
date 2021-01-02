@@ -1,10 +1,18 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:gohoubi_app/components/top_app_bar.dart';
 
 import 'account/account_view.dart';
 import 'reserve/reserve_view.dart';
 import 'search/search_view.dart';
 import 'ticket/ticket_view.dart';
+
+const List<String> labels = [
+  'さがす',
+  'つみたて',
+  'チケット',
+  'アカウント',
+];
 
 class HomeTabView extends StatefulWidget {
   @override
@@ -24,25 +32,28 @@ class _HomeTabViewState extends State<HomeTabView> {
   final List<BottomNavigationBarItem> barItems = [
     BottomNavigationBarItem(
       icon: Icon(Icons.search),
-      label: 'さがす',
+      label: labels[0],
     ),
     BottomNavigationBarItem(
       icon: Icon(CupertinoIcons.money_yen_circle_fill),
-      label: 'つみたて',
+      label: labels[1],
     ),
     BottomNavigationBarItem(
       icon: Icon(CupertinoIcons.ticket_fill),
-      label: 'チケット',
+      label: labels[2],
     ),
     BottomNavigationBarItem(
       icon: Icon(CupertinoIcons.person_fill),
-      label: 'アカウント',
+      label: labels[3],
     ),
   ];
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: TopAppBar(
+        title: labels[currentIndex],
+      ),
       body: views[currentIndex],
       bottomNavigationBar: BottomNavigationBar(
         currentIndex: currentIndex,
