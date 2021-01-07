@@ -1,6 +1,6 @@
-# gohoubi_alpha
+# gohoubi_app
 
-Alpha version of Gohoubi Tsumitate.
+Mobile app of Gohoubi Tsumitate.
 
 ## Getting Started
 

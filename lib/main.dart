@@ -1,4 +1,7 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+
+import 'views/home_tab_view.dart';
 
 void main() {
   runApp(MyApp());
@@ -12,7 +15,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
-      home: Scaffold(),
+      home: HomeTabView(),
     );
   }
 }
