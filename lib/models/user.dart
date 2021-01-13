@@ -24,15 +24,5 @@ User user = User(
       used: false,
       plan: accommodations[0].plans[0],
     ),
-    Ticket(
-      id: 1,
-      used: false,
-      plan: accommodations[1].plans[0],
-    ),
-    Ticket(
-      id: 2,
-      used: false,
-      plan: accommodations[2].plans[0],
-    ),
   ],
 );

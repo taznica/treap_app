@@ -14,20 +14,6 @@ class TicketLargeView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: Text(
-          ticket.plan.accommodation.name + ' - ' + ticket.plan.title,
-          style: TextStyle(
-            color: Colors.black87,
-            fontWeight: FontWeight.bold,
-          ),
-        ),
-        iconTheme: IconThemeData(
-          color: Colors.black87,
-        ),
-        backgroundColor: Colors.white.withOpacity(0),
-        elevation: 0,
-      ),
       body: Padding(
         padding: const EdgeInsets.all(16.0),
         child: Column(
