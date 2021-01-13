@@ -117,7 +117,7 @@ List<Accommodation> accommodations = [
       Plan(
         id: 0,
         price: 20000,
-        title: '伝承千年の宿 佐勘 月3000円プラン',
+        title: '月3000円プラン',
         description: '～守り続けて千年～　世代を超えて愛される【いにしえの湯】',
         image: 'assets/images/sakan_plan_0.jpg',
         accommodation: _accommodations[0],
@@ -125,7 +125,7 @@ List<Accommodation> accommodations = [
       Plan(
         id: 1,
         price: 20000,
-        title: '伝承千年の宿 佐勘 月4000円プラン',
+        title: '月4000円プラン',
         description: '～守り続けて千年～　世代を超えて愛される【いにしえの湯】',
         image: 'assets/images/sakan_plan_1.jpg',
         accommodation: _accommodations[0],
@@ -133,7 +133,7 @@ List<Accommodation> accommodations = [
       Plan(
         id: 2,
         price: 20000,
-        title: '伝承千年の宿 佐勘 月5000円プラン',
+        title: '月5000円プラン',
         description: '～守り続けて千年～　世代を超えて愛される【いにしえの湯】',
         image: 'assets/images/sakan_plan_2.jpg',
         accommodation: _accommodations[0],
@@ -151,7 +151,7 @@ List<Accommodation> accommodations = [
       Plan(
         id: 0,
         price: 20000,
-        title: '伝承千年の宿 佐勘 月3000円プラン',
+        title: '月3000円プラン',
         description: '～守り続けて千年～　世代を超えて愛される【いにしえの湯】',
         image: 'assets/images/sakan_plan_0.jpg',
         accommodation: _accommodations[0],
@@ -159,7 +159,7 @@ List<Accommodation> accommodations = [
       Plan(
         id: 1,
         price: 20000,
-        title: '伝承千年の宿 佐勘 月4000円プラン',
+        title: '月4000円プラン',
         description: '～守り続けて千年～　世代を超えて愛される【いにしえの湯】',
         image: 'assets/images/sakan_plan_1.jpg',
         accommodation: _accommodations[0],
@@ -167,7 +167,7 @@ List<Accommodation> accommodations = [
       Plan(
         id: 2,
         price: 20000,
-        title: '伝承千年の宿 佐勘 月5000円プラン',
+        title: '月5000円プラン',
         description: '～守り続けて千年～　世代を超えて愛される【いにしえの湯】',
         image: 'assets/images/sakan_plan_2.jpg',
         accommodation: _accommodations[0],
@@ -185,7 +185,7 @@ List<Accommodation> accommodations = [
       Plan(
         id: 0,
         price: 20000,
-        title: '伝承千年の宿 佐勘 月3000円プラン',
+        title: '月3000円プラン',
         description: '～守り続けて千年～　世代を超えて愛される【いにしえの湯】',
         image: 'assets/images/sakan_plan_0.jpg',
         accommodation: _accommodations[0],
@@ -193,7 +193,7 @@ List<Accommodation> accommodations = [
       Plan(
         id: 1,
         price: 20000,
-        title: '伝承千年の宿 佐勘 月4000円プラン',
+        title: '月4000円プラン',
         description: '～守り続けて千年～　世代を超えて愛される【いにしえの湯】',
         image: 'assets/images/sakan_plan_1.jpg',
         accommodation: _accommodations[0],
@@ -201,7 +201,7 @@ List<Accommodation> accommodations = [
       Plan(
         id: 2,
         price: 20000,
-        title: '伝承千年の宿 佐勘 月5000円プラン',
+        title: '月5000円プラン',
         description: '～守り続けて千年～　世代を超えて愛される【いにしえの湯】',
         image: 'assets/images/sakan_plan_2.jpg',
         accommodation: _accommodations[0],
@@ -219,7 +219,7 @@ List<Accommodation> accommodations = [
       Plan(
         id: 0,
         price: 20000,
-        title: '伝承千年の宿 佐勘 月3000円プラン',
+        title: '月3000円プラン',
         description: '～守り続けて千年～　世代を超えて愛される【いにしえの湯】',
         image: 'assets/images/sakan_plan_0.jpg',
         accommodation: _accommodations[0],
@@ -227,7 +227,7 @@ List<Accommodation> accommodations = [
       Plan(
         id: 1,
         price: 20000,
-        title: '伝承千年の宿 佐勘 月4000円プラン',
+        title: '月4000円プラン',
         description: '～守り続けて千年～　世代を超えて愛される【いにしえの湯】',
         image: 'assets/images/sakan_plan_1.jpg',
         accommodation: _accommodations[0],
@@ -235,7 +235,7 @@ List<Accommodation> accommodations = [
       Plan(
         id: 2,
         price: 20000,
-        title: '伝承千年の宿 佐勘 月5000円プラン',
+        title: '月5000円プラン',
         description: '～守り続けて千年～　世代を超えて愛される【いにしえの湯】',
         image: 'assets/images/sakan_plan_2.jpg',
         accommodation: _accommodations[0],
