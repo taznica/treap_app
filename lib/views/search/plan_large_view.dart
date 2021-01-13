@@ -3,7 +3,7 @@ import 'package:gohoubi_app/models/accommodation.dart';
 import 'package:gohoubi_app/models/plan.dart';
 
 import 'components/plan_large_card.dart';
-import 'components/tsumitate_menu.dart';
+import 'components/tsumitate_start_button.dart';
 
 class PlanLargeView extends StatelessWidget {
   final Accommodation accommodation;
@@ -39,7 +39,7 @@ class PlanLargeView extends StatelessWidget {
             PlanLargeCard(plan: plan),
             Padding(
               padding: const EdgeInsets.only(top: 16.0),
-              child: TsumitateMenu(plan: plan),
+              child: TsumitateStartButton(plan: plan),
             ),
           ],
         ),

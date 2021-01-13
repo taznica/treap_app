@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:gohoubi_app/models/plan.dart';
 
-class TsumitateMenu extends StatelessWidget {
+class TsumitateStartButton extends StatelessWidget {
   final Plan plan;
 
-  const TsumitateMenu({
+  const TsumitateStartButton({
     Key key,
     this.plan,
   }) : super(key: key);

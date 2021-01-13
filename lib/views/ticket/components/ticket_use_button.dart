@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:gohoubi_app/models/ticket.dart';
 
-class TicketUseMenu extends StatelessWidget {
+class TicketUseButton extends StatelessWidget {
   final Ticket ticket;
 
-  const TicketUseMenu({
+  const TicketUseButton({
     Key key,
     this.ticket,
   }) : super(key: key);
