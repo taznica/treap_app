@@ -28,6 +28,12 @@ class AccommodationInfo extends StatelessWidget {
             accommodation.url,
             style: Theme.of(context).textTheme.bodyText1,
           ),
+          Text(
+            accommodation.description,
+            style: Theme.of(context).textTheme.bodyText1,
+            maxLines: 2,
+            overflow: TextOverflow.ellipsis,
+          ),
         ],
       ),
     );

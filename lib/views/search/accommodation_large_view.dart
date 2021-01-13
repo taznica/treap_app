@@ -23,7 +23,7 @@ class AccommodationLargeView extends StatelessWidget {
           SliverAppBar(
             pinned: true,
             floating: false,
-            expandedHeight: 400,
+            expandedHeight: 300,
             backgroundColor: Colors.transparent,
             flexibleSpace: FlexibleSpaceBar(
               title: Text(
