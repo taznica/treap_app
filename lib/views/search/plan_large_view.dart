@@ -1,18 +1,18 @@
 import 'package:flutter/material.dart';
-import 'package:gohoubi_app/models/item.dart';
-import 'package:gohoubi_app/models/shop.dart';
+import 'package:gohoubi_app/models/accommodation.dart';
+import 'package:gohoubi_app/models/plan.dart';
 
-import 'components/item_large_card.dart';
+import 'components/plan_large_card.dart';
 import 'components/tsumitate_menu.dart';
 
-class ItemLargeView extends StatelessWidget {
-  final Shop shop;
-  final Item item;
+class PlanLargeView extends StatelessWidget {
+  final Accommodation accommodation;
+  final Plan plan;
 
-  const ItemLargeView({
+  const PlanLargeView({
     Key key,
-    this.shop,
-    this.item,
+    this.accommodation,
+    this.plan,
   }) : super(key: key);
 
   @override
@@ -20,7 +20,7 @@ class ItemLargeView extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: Text(
-          shop.name,
+          accommodation.name,
           style: TextStyle(
             color: Colors.black87,
             fontWeight: FontWeight.bold,
@@ -36,10 +36,10 @@ class ItemLargeView extends StatelessWidget {
         padding: const EdgeInsets.all(16.0),
         child: Column(
           children: [
-            ItemLargeCard(item: item),
+            PlanLargeCard(plan: plan),
             Padding(
               padding: const EdgeInsets.only(top: 16.0),
-              child: TsumitateMenu(item: item),
+              child: TsumitateMenu(plan: plan),
             ),
           ],
         ),

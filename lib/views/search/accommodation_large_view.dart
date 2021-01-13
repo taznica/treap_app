@@ -1,17 +1,17 @@
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
-import 'package:gohoubi_app/models/shop.dart';
+import 'package:gohoubi_app/models/accommodation.dart';
 
-import 'components/item_small_card.dart';
-import 'components/shop_info.dart';
-import 'item_large_view.dart';
+import 'components/accommodation_info.dart';
+import 'components/plan_small_card.dart';
+import 'plan_large_view.dart';
 
-class ShopLargeView extends StatelessWidget {
-  final Shop shop;
+class AccommodationLargeView extends StatelessWidget {
+  final Accommodation accommodation;
 
-  const ShopLargeView({
+  const AccommodationLargeView({
     Key key,
-    this.shop,
+    this.accommodation,
   }) : super(key: key);
 
   @override
@@ -27,14 +27,14 @@ class ShopLargeView extends StatelessWidget {
             backgroundColor: Colors.transparent,
             flexibleSpace: FlexibleSpaceBar(
               title: Text(
-                shop.name,
+                accommodation.name,
                 style: TextStyle(
                   color: Colors.white,
                   fontWeight: FontWeight.bold,
                 ),
               ),
               background: Image.asset(
-                shop.image,
+                accommodation.image,
                 fit: BoxFit.cover,
               ),
             ),
@@ -42,28 +42,28 @@ class ShopLargeView extends StatelessWidget {
           SliverList(
             delegate: SliverChildListDelegate(
               [
-                ShopInfo(shop: shop),
+                AccommodationInfo(accommodation: accommodation),
               ],
             ),
           ),
           SliverList(
             delegate: SliverChildBuilderDelegate(
               (context, index) {
-                return ItemSmallCard(
-                  item: shop.items[index],
+                return PlanSmallCard(
+                  plan: accommodation.plans[index],
                   press: () {
                     Navigator.push(context, MaterialPageRoute(
                       builder: (context) {
-                        return ItemLargeView(
-                          shop: shop,
-                          item: shop.items[index],
+                        return PlanLargeView(
+                          accommodation: accommodation,
+                          plan: accommodation.plans[index],
                         );
                       },
                     ));
                   },
                 );
               },
-              childCount: shop.items.length,
+              childCount: accommodation.plans.length,
             ),
           ),
         ],

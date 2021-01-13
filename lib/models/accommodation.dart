@@ -1,23 +1,23 @@
-import 'package:gohoubi_app/models/item.dart';
+import 'package:gohoubi_app/models/plan.dart';
 
-class Shop {
+class Accommodation {
   final int id;
   final String type, name, image, address, url;
-  final List<Item> items;
+  final List<Plan> plans;
 
-  Shop({
+  Accommodation({
     this.id,
     this.type,
     this.name,
     this.image,
     this.address,
     this.url,
-    this.items,
+    this.plans,
   });
 }
 
-List<Shop> _shops = [
-  Shop(
+List<Accommodation> _accommodations = [
+  Accommodation(
     id: 0,
     type: '飲食店',
     name: '牛タン焼専門店司 西口名掛丁店',
@@ -25,7 +25,7 @@ List<Shop> _shops = [
     address: '宮城県仙台青葉区',
     url: 'https://tabelog.com/miyagi/A0401/A040101/4018920/',
   ),
-  Shop(
+  Accommodation(
     id: 1,
     type: '飲食店',
     name: '御酒印船 仙台店',
@@ -33,7 +33,7 @@ List<Shop> _shops = [
     address: '宮城県仙台青葉区',
     url: 'https://tabelog.com/miyagi/A0401/A040101/4000613/',
   ),
-  Shop(
+  Accommodation(
     id: 2,
     type: '飲食店',
     name: '薫りと和酒 紬',
@@ -41,7 +41,7 @@ List<Shop> _shops = [
     address: '宮城県仙台青葉区',
     url: 'https://www.1noi.jp/%E7%B4%AC',
   ),
-  Shop(
+  Accommodation(
     id: 3,
     type: '飲食店',
     name: '御酒印船 仙台店',
@@ -49,7 +49,7 @@ List<Shop> _shops = [
     address: '宮城県仙台青葉区',
     url: 'https://tabelog.com/miyagi/A0401/A040101/4000613/',
   ),
-  Shop(
+  Accommodation(
     id: 4,
     type: '美容院',
     name: 'Agu hair jill 一番町店',
@@ -57,7 +57,7 @@ List<Shop> _shops = [
     address: '宮城県仙台市青葉区',
     url: 'https://beauty.hotpepper.jp/slnH000341560/',
   ),
-  Shop(
+  Accommodation(
     id: 5,
     type: 'マッサージ店',
     name: 'Raffine 仙台パルコ店',
@@ -67,249 +67,249 @@ List<Shop> _shops = [
   ),
 ];
 
-List<Shop> shops = [
-  Shop(
-    id: _shops[0].id,
-    type: _shops[0].type,
-    name: _shops[0].name,
-    image: _shops[0].image,
-    address: _shops[0].address,
-    url: _shops[0].url,
-    items: [
-      Item(
+List<Accommodation> accommodations = [
+  Accommodation(
+    id: _accommodations[0].id,
+    type: _accommodations[0].type,
+    name: _accommodations[0].name,
+    image: _accommodations[0].image,
+    address: _accommodations[0].address,
+    url: _accommodations[0].url,
+    plans: [
+      Plan(
         id: 0,
         price: 5000,
         title: 'oooo',
         description: 'hoge',
         image: 'assets/images/tsukasa_shop.jpeg',
-        shop: _shops[0],
+        accommodation: _accommodations[0],
       ),
-      Item(
+      Plan(
         id: 1,
         price: 5000,
         title: '0000',
         description: '紬の宴会コース。120分飲み放題（ラストオーダー100分）付きです。',
         image: 'assets/images/tsukasa_shop.jpeg',
-        shop: _shops[0],
+        accommodation: _accommodations[0],
       ),
-      Item(
+      Plan(
         id: 2,
         price: 5000,
         title: 'hoge',
         description: 'hoge',
         image: 'assets/images/tsukasa_shop.jpeg',
-        shop: _shops[0],
+        accommodation: _accommodations[0],
       ),
-      Item(
+      Plan(
         id: 3,
         price: 5000,
         title: 'hoge',
         description: 'hoge',
         image: 'assets/images/tsukasa_shop.jpeg',
-        shop: _shops[0],
+        accommodation: _accommodations[0],
       ),
     ],
   ),
-  Shop(
-    id: _shops[1].id,
-    type: _shops[1].type,
-    name: _shops[1].name,
-    image: _shops[1].image,
-    address: _shops[1].address,
-    url: _shops[1].url,
-    items: [
-      Item(
+  Accommodation(
+    id: _accommodations[1].id,
+    type: _accommodations[1].type,
+    name: _accommodations[1].name,
+    image: _accommodations[1].image,
+    address: _accommodations[1].address,
+    url: _accommodations[1].url,
+    plans: [
+      Plan(
         id: 0,
         price: 5000,
         title: 'hoge',
         description: 'hoge',
         image: 'assets/images/goshuinsen_shop.jpeg',
-        shop: _shops[1],
+        accommodation: _accommodations[1],
       ),
-      Item(
+      Plan(
         id: 1,
         price: 5000,
         title: 'hoge',
         description: 'hoge',
         image: 'assets/images/goshuinsen_shop.jpeg',
-        shop: _shops[1],
+        accommodation: _accommodations[1],
       ),
-      Item(
+      Plan(
         id: 2,
         price: 5000,
         title: 'hoge',
         description: 'hoge',
         image: 'assets/images/goshuinsen_shop.jpeg',
-        shop: _shops[1],
+        accommodation: _accommodations[1],
       ),
-      Item(
+      Plan(
         id: 3,
         price: 5000,
         title: 'hoge',
         description: 'hoge',
         image: 'assets/images/goshuinsen_shop.jpeg',
-        shop: _shops[1],
+        accommodation: _accommodations[1],
       ),
     ],
   ),
-  Shop(
-    id: _shops[2].id,
-    type: _shops[2].type,
-    name: _shops[2].name,
-    image: _shops[2].image,
-    address: _shops[2].address,
-    url: _shops[2].url,
-    items: [
-      Item(
+  Accommodation(
+    id: _accommodations[2].id,
+    type: _accommodations[2].type,
+    name: _accommodations[2].name,
+    image: _accommodations[2].image,
+    address: _accommodations[2].address,
+    url: _accommodations[2].url,
+    plans: [
+      Plan(
         id: 0,
         price: 5000,
         title: '宴会コース',
         description: '紬の宴会コース。120分飲み放題（ラストオーダー100分）付きです。',
         image: 'assets/images/tsumugi_ticket_1.jpg',
-        shop: _shops[2],
+        accommodation: _accommodations[2],
       ),
-      Item(
+      Plan(
         id: 1,
         price: 6500,
         title: '宴会コース',
         description: '紬の宴会コース。120分飲み放題（ラストオーダー100分）付きです。',
         image: 'assets/images/tsumugi_ticket_1.jpg',
-        shop: _shops[2],
+        accommodation: _accommodations[2],
       ),
-      Item(
+      Plan(
         id: 2,
         price: 8000,
         title: '雲宴会コース',
         description:
             '紬の宴会コース。120分飲み放題（ラストオーダー100分）付きです。ああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああ',
         image: 'assets/images/tsumugi_ticket_1.jpg',
-        shop: _shops[2],
+        accommodation: _accommodations[2],
       ),
     ],
   ),
-  Shop(
-    id: _shops[3].id,
-    type: _shops[3].type,
-    name: _shops[3].name,
-    image: _shops[3].image,
-    address: _shops[3].address,
-    url: _shops[3].url,
-    items: [
-      Item(
+  Accommodation(
+    id: _accommodations[3].id,
+    type: _accommodations[3].type,
+    name: _accommodations[3].name,
+    image: _accommodations[3].image,
+    address: _accommodations[3].address,
+    url: _accommodations[3].url,
+    plans: [
+      Plan(
         id: 0,
         price: 5000,
         title: 'hoge',
         description: 'hoge',
         image: 'assets/images/goshuinsen_shop.jpeg',
-        shop: _shops[3],
+        accommodation: _accommodations[3],
       ),
-      Item(
+      Plan(
         id: 1,
         price: 5000,
         title: 'hoge',
         description: 'hoge',
         image: 'assets/images/goshuinsen_shop.jpeg',
-        shop: _shops[3],
+        accommodation: _accommodations[3],
       ),
-      Item(
+      Plan(
         id: 2,
         price: 5000,
         title: 'hoge',
         description: 'hoge',
         image: 'assets/images/goshuinsen_shop.jpeg',
-        shop: _shops[3],
+        accommodation: _accommodations[3],
       ),
-      Item(
+      Plan(
         id: 3,
         price: 5000,
         title: 'hoge',
         description: 'hoge',
         image: 'assets/images/goshuinsen_shop.jpeg',
-        shop: _shops[3],
+        accommodation: _accommodations[3],
       ),
     ],
   ),
-  Shop(
-    id: _shops[4].id,
-    type: _shops[4].type,
-    name: _shops[4].name,
-    image: _shops[4].image,
-    address: _shops[4].address,
-    url: _shops[4].url,
-    items: [
-      Item(
+  Accommodation(
+    id: _accommodations[4].id,
+    type: _accommodations[4].type,
+    name: _accommodations[4].name,
+    image: _accommodations[4].image,
+    address: _accommodations[4].address,
+    url: _accommodations[4].url,
+    plans: [
+      Plan(
         id: 0,
         price: 5000,
         title: 'hoge',
         description: 'hoge',
         image: 'assets/images/agu_shop.jpeg',
-        shop: _shops[4],
+        accommodation: _accommodations[4],
       ),
-      Item(
+      Plan(
         id: 1,
         price: 5000,
         title: 'hoge',
         description: 'hoge',
         image: 'assets/images/agu_shop.jpeg',
-        shop: _shops[4],
+        accommodation: _accommodations[4],
       ),
-      Item(
+      Plan(
         id: 2,
         price: 5000,
         title: 'hoge',
         description: 'hoge',
         image: 'assets/images/agu_shop.jpeg',
-        shop: _shops[4],
+        accommodation: _accommodations[4],
       ),
-      Item(
+      Plan(
         id: 3,
         price: 5000,
         title: 'hoge',
         description: 'hoge',
         image: 'assets/images/agu_shop.jpeg',
-        shop: _shops[4],
+        accommodation: _accommodations[4],
       ),
     ],
   ),
-  Shop(
-    id: _shops[5].id,
-    type: _shops[5].type,
-    name: _shops[5].name,
-    image: _shops[5].image,
-    address: _shops[5].address,
-    url: _shops[5].url,
-    items: [
-      Item(
+  Accommodation(
+    id: _accommodations[5].id,
+    type: _accommodations[5].type,
+    name: _accommodations[5].name,
+    image: _accommodations[5].image,
+    address: _accommodations[5].address,
+    url: _accommodations[5].url,
+    plans: [
+      Plan(
         id: 0,
         price: 5000,
         title: 'hoge',
         description: 'hoge',
         image: 'assets/images/raffine_shop.jpeg',
-        shop: _shops[5],
+        accommodation: _accommodations[5],
       ),
-      Item(
+      Plan(
         id: 1,
         price: 5000,
         title: 'hoge',
         description: 'hoge',
         image: 'assets/images/raffine_shop.jpeg',
-        shop: _shops[5],
+        accommodation: _accommodations[5],
       ),
-      Item(
+      Plan(
         id: 2,
         price: 5000,
         title: 'hoge',
         description: 'hoge',
         image: 'assets/images/raffine_shop.jpeg',
-        shop: _shops[5],
+        accommodation: _accommodations[5],
       ),
-      Item(
+      Plan(
         id: 3,
         price: 5000,
         title: 'hoge',
         description: 'hoge',
         image: 'assets/images/raffine_shop.jpeg',
-        shop: _shops[5],
+        accommodation: _accommodations[5],
       ),
     ],
   ),

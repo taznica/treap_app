@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
-import 'package:gohoubi_app/models/item.dart';
+import 'package:gohoubi_app/models/plan.dart';
 
 class TsumitateMenu extends StatefulWidget {
-  final Item item;
+  final Plan plan;
 
   const TsumitateMenu({
     Key key,
-    this.item,
+    this.plan,
   }) : super(key: key);
 
   @override
@@ -18,7 +18,7 @@ class _TsumitateMenuState extends State<TsumitateMenu> {
 
   @override
   Widget build(BuildContext context) {
-    int pricePerDay = (widget.item.price / _sliderValue).ceil();
+    int pricePerDay = (widget.plan.price / _sliderValue).ceil();
 
     return Container(
       decoration: BoxDecoration(

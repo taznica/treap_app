@@ -1,4 +1,4 @@
-import 'shop.dart';
+import 'accommodation.dart';
 import 'ticket.dart';
 
 class User {
@@ -22,17 +22,17 @@ User user = User(
     Ticket(
       id: 0,
       used: false,
-      item: shops[0].items[0],
+      plan: accommodations[0].plans[0],
     ),
     Ticket(
       id: 1,
       used: false,
-      item: shops[1].items[0],
+      plan: accommodations[1].plans[0],
     ),
     Ticket(
       id: 2,
       used: false,
-      item: shops[2].items[0],
+      plan: accommodations[2].plans[0],
     ),
   ],
 );

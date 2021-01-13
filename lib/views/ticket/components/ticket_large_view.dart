@@ -16,7 +16,7 @@ class TicketLargeView extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: Text(
-          ticket.item.shop.name + ' - ' + ticket.item.title,
+          ticket.plan.accommodation.name + ' - ' + ticket.plan.title,
           style: TextStyle(
             color: Colors.black87,
             fontWeight: FontWeight.bold,

@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
-import 'package:gohoubi_app/models/shop.dart';
+import 'package:gohoubi_app/models/accommodation.dart';
 
-class ShopSmallCard extends StatelessWidget {
-  final Shop shop;
+class AccommodationSmallCard extends StatelessWidget {
+  final Accommodation accommodation;
   final Function press;
 
-  const ShopSmallCard({
+  const AccommodationSmallCard({
     Key key,
-    this.shop,
+    this.accommodation,
     this.press,
   }) : super(key: key);
 
@@ -25,7 +25,7 @@ class ShopSmallCard extends StatelessWidget {
                   child: ClipRRect(
                     borderRadius: BorderRadius.circular(12),
                     child: Image.asset(
-                      shop.image,
+                      accommodation.image,
                       height: 150,
                       width: 150,
                       fit: BoxFit.cover,
@@ -37,13 +37,13 @@ class ShopSmallCard extends StatelessWidget {
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: <Widget>[
                       Text(
-                        shop.name,
+                        accommodation.name,
                         style: Theme.of(context)
                             .textTheme
                             .headline6
                             .copyWith(fontWeight: FontWeight.bold),
                       ),
-                      Text(shop.address),
+                      Text(accommodation.address),
                     ],
                   ),
                 ),

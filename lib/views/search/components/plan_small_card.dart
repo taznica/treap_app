@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
-import 'package:gohoubi_app/models/item.dart';
+import 'package:gohoubi_app/models/plan.dart';
 
-class ItemSmallCard extends StatelessWidget {
-  final Item item;
+class PlanSmallCard extends StatelessWidget {
+  final Plan plan;
   final Function press;
 
-  const ItemSmallCard({
+  const PlanSmallCard({
     Key key,
-    this.item,
+    this.plan,
     this.press,
   }) : super(key: key);
 
@@ -32,7 +32,7 @@ class ItemSmallCard extends StatelessWidget {
                 child: ClipRRect(
                   borderRadius: BorderRadius.circular(6),
                   child: Image.asset(
-                    item.image,
+                    plan.image,
                     height: 100,
                     width: 100,
                     fit: BoxFit.cover,
@@ -56,7 +56,7 @@ class ItemSmallCard extends StatelessWidget {
                         child: Align(
                           alignment: Alignment.bottomLeft,
                           child: Text(
-                            item.title,
+                            plan.title,
                             style: Theme.of(context)
                                 .textTheme
                                 .subtitle1
@@ -67,7 +67,7 @@ class ItemSmallCard extends StatelessWidget {
                       Container(
                         height: 60.0,
                         child: Text(
-                          item.description,
+                          plan.description,
                           maxLines: 3,
                           overflow: TextOverflow.ellipsis,
                         ),
@@ -76,7 +76,7 @@ class ItemSmallCard extends StatelessWidget {
                         alignment: Alignment.centerRight,
                         height: 24.0,
                         child: Text(
-                          item.stringOfPrice(),
+                          plan.stringOfPrice(),
                           style: Theme.of(context)
                               .textTheme
                               .bodyText1

@@ -4,11 +4,11 @@ import 'package:gohoubi_app/components/top_app_bar.dart';
 
 import 'account/account_view.dart';
 import 'reserve/reserve_view.dart';
-import 'search/search_view.dart';
+import 'search/start_view.dart';
 import 'ticket/ticket_view.dart';
 
 const List<String> labels = [
-  'さがす',
+  'はじめる',
   'つみたて',
   'チケット',
   'アカウント',
@@ -23,7 +23,7 @@ class _HomeTabViewState extends State<HomeTabView> {
   int currentIndex = 0;
 
   final List<Widget> views = [
-    SearchView(),
+    StartView(),
     ReserveView(),
     TicketView(),
     AccountView(),

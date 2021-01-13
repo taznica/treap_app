@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
-import 'package:gohoubi_app/models/item.dart';
+import 'package:gohoubi_app/models/plan.dart';
 
-class ItemLargeCard extends StatelessWidget {
-  const ItemLargeCard({
+class PlanLargeCard extends StatelessWidget {
+  const PlanLargeCard({
     Key key,
-    @required this.item,
+    @required this.plan,
   }) : super(key: key);
 
-  final Item item;
+  final Plan plan;
 
   @override
   Widget build(BuildContext context) {
@@ -22,7 +22,7 @@ class ItemLargeCard extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Text(
-              item.title,
+              plan.title,
               style: Theme.of(context)
                   .textTheme
                   .headline6
@@ -35,7 +35,7 @@ class ItemLargeCard extends StatelessWidget {
                 child: ClipRRect(
                   borderRadius: BorderRadius.circular(6),
                   child: Image.asset(
-                    item.image,
+                    plan.image,
                     height: 240,
                     width: 240,
                     fit: BoxFit.cover,
@@ -44,7 +44,7 @@ class ItemLargeCard extends StatelessWidget {
               ),
             ),
             Text(
-              item.description,
+              plan.description,
               maxLines: 4,
               overflow: TextOverflow.ellipsis,
             ),
@@ -53,7 +53,7 @@ class ItemLargeCard extends StatelessWidget {
               child: Align(
                 alignment: Alignment.centerRight,
                 child: Text(
-                  item.stringOfPrice(),
+                  plan.stringOfPrice(),
                   style: Theme.of(context)
                       .textTheme
                       .subtitle1

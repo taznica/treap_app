@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
-import 'package:gohoubi_app/models/shop.dart';
+import 'package:gohoubi_app/models/accommodation.dart';
 
-class ShopInfo extends StatelessWidget {
-  const ShopInfo({
+class AccommodationInfo extends StatelessWidget {
+  const AccommodationInfo({
     Key key,
-    @required this.shop,
+    @required this.accommodation,
   }) : super(key: key);
 
-  final Shop shop;
+  final Accommodation accommodation;
 
   @override
   Widget build(BuildContext context) {
@@ -17,15 +17,15 @@ class ShopInfo extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           Text(
-            shop.type,
+            accommodation.type,
             style: Theme.of(context).textTheme.bodyText1,
           ),
           Text(
-            shop.address,
+            accommodation.address,
             style: Theme.of(context).textTheme.bodyText1,
           ),
           Text(
-            shop.url,
+            accommodation.url,
             style: Theme.of(context).textTheme.bodyText1,
           ),
         ],

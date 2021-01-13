@@ -1,17 +1,17 @@
-import 'shop.dart';
+import 'accommodation.dart';
 
-class Item {
+class Plan {
   final int id, price;
   final String title, description, image;
-  final Shop shop;
+  final Accommodation accommodation;
 
-  Item({
+  Plan({
     this.id,
     this.price,
     this.title,
     this.description,
     this.image,
-    this.shop,
+    this.accommodation,
   });
 
   String stringOfPrice() {
