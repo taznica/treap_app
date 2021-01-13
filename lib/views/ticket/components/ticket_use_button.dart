@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:gohoubi_app/models/ticket.dart';
+import 'package:gohoubi_app/views/ticket/components/ticket_use_view.dart';
 
 class TicketUseButton extends StatelessWidget {
   final Ticket ticket;
@@ -20,7 +21,13 @@ class TicketUseButton extends StatelessWidget {
             right: 64.0,
           ),
           child: FlatButton(
-            onPressed: () {},
+            onPressed: () {
+              Navigator.push(context, MaterialPageRoute(
+                builder: (context) {
+                  return TicketUseView();
+                },
+              ));
+            },
             color: Colors.amber,
             splashColor: Colors.amberAccent,
             shape: RoundedRectangleBorder(
