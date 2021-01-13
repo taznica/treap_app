@@ -12,10 +12,6 @@ class TicketUseMenu extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      // decoration: BoxDecoration(
-      //   border: Border.all(color: Colors.amber),
-      //   borderRadius: BorderRadius.circular(6),
-      // ),
       child: Padding(
         padding: const EdgeInsets.all(16.0),
         child: Padding(
