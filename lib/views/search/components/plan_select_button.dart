@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:gohoubi_app/models/plan.dart';
 
-class TsumitateStartButton extends StatelessWidget {
+class PlanSelectButton extends StatelessWidget {
   final Plan plan;
 
-  const TsumitateStartButton({
+  const PlanSelectButton({
     Key key,
     this.plan,
   }) : super(key: key);
