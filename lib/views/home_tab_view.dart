@@ -55,7 +55,9 @@ class _HomeTabViewState extends State<HomeTabView> {
       backgroundColor: Colors.white,
       bottomNavigationBar: BottomNavigationBar(
         currentIndex: currentIndex,
+        elevation: 0,
         type: BottomNavigationBarType.fixed,
+        backgroundColor: Colors.white,
         selectedItemColor: treapColor,
         unselectedItemColor: Colors.black87,
         selectedFontSize: 12.0, // same as unselectedFontSize
