@@ -6,6 +6,9 @@ import 'components/ticket_large_view.dart';
 class TicketView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return TicketLargeView(ticket: user.tickets[0]);
+    return Padding(
+      padding: const EdgeInsets.only(top: 96.0),
+      child: TicketLargeView(ticket: user.tickets[0]),
+    );
   }
 }

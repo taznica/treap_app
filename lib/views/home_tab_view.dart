@@ -1,6 +1,5 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:gohoubi_app/components/top_app_bar.dart';
 import 'package:gohoubi_app/constants.dart';
 
 import 'account/account_view.dart';
@@ -52,10 +51,8 @@ class _HomeTabViewState extends State<HomeTabView> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: TopAppBar(
-        title: labels[currentIndex],
-      ),
       body: views[currentIndex],
+      backgroundColor: Colors.white,
       bottomNavigationBar: BottomNavigationBar(
         currentIndex: currentIndex,
         type: BottomNavigationBarType.fixed,

@@ -10,7 +10,12 @@ class AccountView extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Padding(
-        padding: const EdgeInsets.all(4.0),
+        padding: const EdgeInsets.only(
+          top: 40.0,
+          bottom: 4.0,
+          left: 4.0,
+          right: 4.0,
+        ),
         child: ListView(
           children: [
             ProfileImage(
