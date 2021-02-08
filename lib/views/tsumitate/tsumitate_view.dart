@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-class ReserveView extends StatelessWidget {
+class TsumitateView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container();

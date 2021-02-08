@@ -4,9 +4,9 @@ import 'package:gohoubi_app/components/top_app_bar.dart';
 import 'package:gohoubi_app/constants.dart';
 
 import 'account/account_view.dart';
-import 'reserve/reserve_view.dart';
 import 'search/start_view.dart';
 import 'ticket/ticket_view.dart';
+import 'tsumitate/tsumitate_view.dart';
 
 const List<String> labels = [
   'はじめる',
@@ -25,7 +25,7 @@ class _HomeTabViewState extends State<HomeTabView> {
 
   final List<Widget> views = [
     StartView(),
-    ReserveView(),
+    TsumitateView(),
     TicketView(),
     AccountView(),
   ];
