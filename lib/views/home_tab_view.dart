@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:gohoubi_app/components/top_app_bar.dart';
+import 'package:gohoubi_app/constants.dart';
 
 import 'account/account_view.dart';
 import 'reserve/reserve_view.dart';
@@ -58,7 +59,7 @@ class _HomeTabViewState extends State<HomeTabView> {
       bottomNavigationBar: BottomNavigationBar(
         currentIndex: currentIndex,
         type: BottomNavigationBarType.fixed,
-        selectedItemColor: Colors.amber,
+        selectedItemColor: treapColor,
         unselectedItemColor: Colors.black87,
         selectedFontSize: 12.0, // same as unselectedFontSize
         selectedLabelStyle: TextStyle(fontWeight: FontWeight.bold),

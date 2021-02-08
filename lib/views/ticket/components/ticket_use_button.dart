@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:gohoubi_app/constants.dart';
 import 'package:gohoubi_app/models/ticket.dart';
 import 'package:gohoubi_app/views/ticket/components/ticket_use_view.dart';
 
@@ -28,8 +29,8 @@ class TicketUseButton extends StatelessWidget {
                 },
               ));
             },
-            color: Colors.amber,
-            splashColor: Colors.amberAccent,
+            color: treapColor,
+            splashColor: treapAccentColor,
             shape: RoundedRectangleBorder(
               borderRadius: BorderRadius.circular(8.0),
             ),

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:gohoubi_app/constants.dart';
 import 'package:gohoubi_app/models/plan.dart';
 
 class PlanSelectButton extends StatelessWidget {
@@ -21,8 +22,8 @@ class PlanSelectButton extends StatelessWidget {
           ),
           child: FlatButton(
             onPressed: () {},
-            color: Colors.amber,
-            splashColor: Colors.amberAccent,
+            color: treapColor,
+            splashColor: treapAccentColor,
             shape: RoundedRectangleBorder(
               borderRadius: BorderRadius.circular(8.0),
             ),

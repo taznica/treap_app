@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:gohoubi_app/constants.dart';
 import 'package:gohoubi_app/models/ticket.dart';
 
 class TicketLargeCard extends StatelessWidget {
@@ -14,7 +15,7 @@ class TicketLargeCard extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       decoration: BoxDecoration(
-        border: Border.all(color: Colors.amber),
+        border: Border.all(color: treapColor),
         borderRadius: BorderRadius.circular(6),
       ),
       child: Padding(
