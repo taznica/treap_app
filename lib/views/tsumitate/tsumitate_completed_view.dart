@@ -148,7 +148,7 @@ class TsumitateCompletedView extends StatelessWidget {
                                             ),
                                       ),
                                       Text(
-                                        '2',
+                                        '2日',
                                         style: Theme.of(context)
                                             .textTheme
                                             .headline5
