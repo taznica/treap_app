@@ -2,8 +2,9 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:gohoubi_app/constants.dart';
 import 'package:gohoubi_app/models/user.dart';
+import 'package:gohoubi_app/views/ticket/components/ticket_use_view.dart';
 
-class TsumitateView extends StatelessWidget {
+class TsumitateCompletedView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -76,7 +77,7 @@ class TsumitateView extends StatelessWidget {
                                             ),
                                       ),
                                       Text(
-                                        '25600円',
+                                        '32000円',
                                         style: Theme.of(context)
                                             .textTheme
                                             .headline5
@@ -88,7 +89,7 @@ class TsumitateView extends StatelessWidget {
                                   ),
                                 ),
                                 Image.asset(
-                                  'assets/images/progress_823.png',
+                                  'assets/images/progress_100.png',
                                   height: 120,
                                 )
                               ],
@@ -147,7 +148,7 @@ class TsumitateView extends StatelessWidget {
                                             ),
                                       ),
                                       Text(
-                                        '80',
+                                        '2',
                                         style: Theme.of(context)
                                             .textTheme
                                             .headline5
@@ -275,7 +276,16 @@ class TsumitateView extends StatelessWidget {
                       right: 64.0,
                     ),
                     child: FlatButton(
-                      onPressed: () {},
+                      onPressed: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) {
+                              return TicketUseView();
+                            },
+                          ),
+                        );
+                      },
                       color: treapColor,
                       splashColor: treapAccentColor,
                       shape: RoundedRectangleBorder(
