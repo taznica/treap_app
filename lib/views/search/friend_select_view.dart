@@ -28,6 +28,15 @@ class _FriendSelectViewState extends State<FriendSelectView> {
     false,
   ];
 
+  List<String> friendPhotos = [
+    'assets/images/1_friend_eika.png',
+    'assets/images/2_friend_moeno.png',
+    'assets/images/3_friend_yume.png',
+    'assets/images/4_friend_keisuke.png',
+    'assets/images/5_friend_mirei.png',
+    'assets/images/6_friend_takatoshi.png',
+  ];
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -58,6 +67,9 @@ class _FriendSelectViewState extends State<FriendSelectView> {
                     child: Column(
                       children: [
                         CheckboxListTile(
+                          secondary: Image.asset(
+                            friendPhotos[index],
+                          ),
                           title: Text(
                             friends[index].name,
                             style: Theme.of(context).textTheme.headline6,
