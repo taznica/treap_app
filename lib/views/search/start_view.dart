@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:gohoubi_app/constants.dart';
 
+import '../home_tab_view.dart';
+
 class StartView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
@@ -60,7 +62,10 @@ class StartView extends StatelessWidget {
               ),
               child: FlatButton(
                 onPressed: () {
-                  // Navigator.of(context).popAndPushNamed('/search');
+                  Navigator.of(context)
+                      .push(MaterialPageRoute(builder: (context) {
+                    return HomeTabView();
+                  }));
                 },
                 color: Colors.white,
                 splashColor: treapAccentColor,
@@ -71,7 +76,7 @@ class StartView extends StatelessWidget {
                 minWidth: 150,
                 child: Align(
                   child: Text(
-                    'つみたてタブを開く',
+                    '戻る',
                     style: Theme.of(context).textTheme.subtitle1.copyWith(
                           color: treapColor,
                           fontWeight: FontWeight.bold,
