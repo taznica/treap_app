@@ -1,20 +1,18 @@
 import 'accommodation.dart';
 
 class Plan {
-  final int id, price;
-  final String title, description, image;
+  final int id, term;
   final Accommodation accommodation;
 
   Plan({
     this.id,
-    this.price,
-    this.title,
-    this.description,
-    this.image,
+    this.term,
     this.accommodation,
   });
-
-  String stringOfPrice() {
-    return this.price.toString() + '円（税込）';
-  }
 }
+
+Plan plan = Plan(
+  id: 0,
+  term: 6,
+  accommodation: accommodations[2],
+);

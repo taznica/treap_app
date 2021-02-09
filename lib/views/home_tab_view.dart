@@ -3,14 +3,14 @@ import 'package:flutter/material.dart';
 import 'package:gohoubi_app/constants.dart';
 
 import 'account/account_view.dart';
-import 'search/start_view.dart';
+import 'search/search_view.dart';
 import 'ticket/ticket_view.dart';
 import 'tsumitate/tsumitate_view.dart';
 
 const List<String> labels = [
-  'はじめる',
+  'さがす',
   'つみたて',
-  'チケット',
+  'フレンド',
   'アカウント',
 ];
 
@@ -23,7 +23,7 @@ class _HomeTabViewState extends State<HomeTabView> {
   int currentIndex = 0;
 
   final List<Widget> views = [
-    StartView(),
+    SearchView(),
     TsumitateView(),
     TicketView(),
     AccountView(),
@@ -39,7 +39,7 @@ class _HomeTabViewState extends State<HomeTabView> {
       label: labels[1],
     ),
     BottomNavigationBarItem(
-      icon: Icon(CupertinoIcons.ticket_fill),
+      icon: Icon(CupertinoIcons.person_3_fill),
       label: labels[2],
     ),
     BottomNavigationBarItem(

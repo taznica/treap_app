@@ -1,10 +1,10 @@
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
+import 'package:gohoubi_app/constants.dart';
 import 'package:gohoubi_app/models/accommodation.dart';
+import 'package:gohoubi_app/views/search/plan_select_view.dart';
 
 import 'components/accommodation_info.dart';
-import 'components/plan_small_card.dart';
-import 'plan_large_view.dart';
 
 class AccommodationLargeView extends StatelessWidget {
   final Accommodation accommodation;
@@ -33,9 +33,12 @@ class AccommodationLargeView extends StatelessWidget {
                   fontWeight: FontWeight.bold,
                 ),
               ),
-              background: Image.asset(
-                accommodation.image,
-                fit: BoxFit.cover,
+              background: Hero(
+                tag: accommodation.id,
+                child: Image.asset(
+                  accommodation.images[0],
+                  fit: BoxFit.cover,
+                ),
               ),
             ),
           ),
@@ -43,27 +46,45 @@ class AccommodationLargeView extends StatelessWidget {
             delegate: SliverChildListDelegate(
               [
                 AccommodationInfo(accommodation: accommodation),
-              ],
-            ),
-          ),
-          SliverList(
-            delegate: SliverChildBuilderDelegate(
-              (context, index) {
-                return PlanSmallCard(
-                  plan: accommodation.plans[index],
-                  press: () {
-                    Navigator.push(context, MaterialPageRoute(
-                      builder: (context) {
-                        return PlanLargeView(
-                          accommodation: accommodation,
-                          plan: accommodation.plans[index],
-                        );
+                Padding(
+                  padding: const EdgeInsets.only(
+                    top: 16.0,
+                    bottom: 56.0,
+                    left: 16.0,
+                    right: 16.0,
+                  ),
+                  child: Padding(
+                    padding: const EdgeInsets.only(
+                      left: 64.0,
+                      right: 64.0,
+                    ),
+                    child: FlatButton(
+                      onPressed: () {
+                        Navigator.push(context,
+                            MaterialPageRoute(builder: (context) {
+                          return PlanSelectView(accommodation: accommodation);
+                        }));
                       },
-                    ));
-                  },
-                );
-              },
-              childCount: accommodation.plans.length,
+                      color: treapColor,
+                      splashColor: treapAccentColor,
+                      shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(8.0),
+                      ),
+                      height: 50,
+                      minWidth: 200,
+                      child: Align(
+                        child: Text(
+                          '積立を始める',
+                          style: Theme.of(context).textTheme.subtitle1.copyWith(
+                                color: Colors.white,
+                                fontWeight: FontWeight.bold,
+                              ),
+                        ),
+                      ),
+                    ),
+                  ),
+                ),
+              ],
             ),
           ),
         ],

@@ -31,7 +31,7 @@ class TicketLargeCard extends StatelessWidget {
                   .copyWith(fontWeight: FontWeight.bold),
             ),
             Text(
-              ticket.plan.title,
+              ticket.plan.accommodation.name,
               style: Theme.of(context)
                   .textTheme
                   .subtitle1
@@ -44,7 +44,7 @@ class TicketLargeCard extends StatelessWidget {
                 child: ClipRRect(
                   borderRadius: BorderRadius.circular(6),
                   child: Image.asset(
-                    ticket.plan.image,
+                    ticket.plan.accommodation.images[0],
                     height: 240,
                     width: 240,
                     fit: BoxFit.cover,
@@ -53,7 +53,7 @@ class TicketLargeCard extends StatelessWidget {
               ),
             ),
             Text(
-              ticket.plan.description,
+              ticket.plan.accommodation.description,
               maxLines: 4,
               overflow: TextOverflow.ellipsis,
             ),
@@ -62,7 +62,7 @@ class TicketLargeCard extends StatelessWidget {
               child: Align(
                 alignment: Alignment.centerRight,
                 child: Text(
-                  ticket.plan.stringOfPrice(),
+                  ticket.plan.accommodation.stringOfPrice(),
                   style: Theme.of(context)
                       .textTheme
                       .subtitle1

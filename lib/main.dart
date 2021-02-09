@@ -1,10 +1,12 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 
 import 'views/home_tab_view.dart';
 
 void main() {
+  SystemChrome.setEnabledSystemUIOverlays([]);
   runApp(MyApp());
 }
 
@@ -12,6 +14,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     const locale = Locale("ja", "JP");
+    SystemChrome.setEnabledSystemUIOverlays([]);
 
     return MaterialApp(
       title: 'Gohoubi Alpha',
@@ -27,6 +30,12 @@ class MyApp extends StatelessWidget {
       supportedLocales: const [
         locale,
       ],
+      debugShowCheckedModeBanner: false,
+      // initialRoute: '/',
+      routes: {
+        // '/': (BuildContext context) => HomeTabView(),
+        // '/search': (BuildContext context) => SearchView(),
+      },
       home: HomeTabView(),
     );
   }

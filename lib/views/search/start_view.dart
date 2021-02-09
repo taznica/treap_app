@@ -1,55 +1,88 @@
 import 'package:flutter/material.dart';
-import 'package:gohoubi_app/models/accommodation.dart';
-
-import 'accommodation_large_view.dart';
-import 'components/accommodation_small_card.dart';
+import 'package:gohoubi_app/constants.dart';
 
 class StartView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: const EdgeInsets.only(
-        top: 16.0,
-        left: 8.0,
-        right: 8.0,
-      ),
-      child: ListView.builder(
-          itemCount: accommodations.length,
-          itemBuilder: (context, index) {
-            if (index == 0) {
-              return Padding(
-                padding: const EdgeInsets.only(
-                  top: 32.0,
-                  bottom: 8.0,
-                  left: 16.0,
+      color: Colors.white,
+      alignment: Alignment.center,
+      child: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: [
+          Image.asset(
+            'assets/images/treap_logo_icon.png',
+            height: 160,
+          ),
+          Text(
+            '積立が始まりました！',
+            style: Theme.of(context).textTheme.headline6.copyWith(
+                  color: Colors.black87,
+                  fontWeight: FontWeight.bold,
                 ),
-                child: Text(
-                  'さがす',
-                  style: Theme.of(context).textTheme.headline4.copyWith(
-                        color: Colors.black87,
-                        fontWeight: FontWeight.bold,
-                      ),
-                ),
-              );
-            } else {
-              return AccommodationSmallCard(
-                accommodation: accommodations[index - 1],
-                press: () {
-                  Navigator.push(
-                    context,
-                    MaterialPageRoute(
-                      builder: (context) {
-                        return AccommodationLargeView(
-                          accommodation: accommodations[index - 1],
-                        );
-                      },
-                      // fullscreenDialog: true,
+          ),
+          Padding(
+            padding: const EdgeInsets.only(
+              top: 80.0,
+              left: 24.0,
+              right: 24.0,
+            ),
+            child: RichText(
+              textAlign: TextAlign.center,
+              text: TextSpan(
+                style: Theme.of(context).textTheme.subtitle2.copyWith(
+                      color: Colors.black87,
                     ),
-                  );
+                children: [
+                  TextSpan(text: '積立状況の確認・変更は\n'),
+                  TextSpan(
+                    text: 'つみたてタブ',
+                    style: Theme.of(context).textTheme.subtitle2.copyWith(
+                          color: treapColor,
+                        ),
+                  ),
+                  TextSpan(text: 'から行うことができます。'),
+                ],
+              ),
+            ),
+          ),
+          Padding(
+            padding: const EdgeInsets.only(
+              top: 32.0,
+              bottom: 16.0,
+              left: 16.0,
+              right: 16.0,
+            ),
+            child: Padding(
+              padding: const EdgeInsets.only(
+                left: 64.0,
+                right: 64.0,
+              ),
+              child: FlatButton(
+                onPressed: () {
+                  // Navigator.of(context).popAndPushNamed('/search');
                 },
-              );
-            }
-          }),
+                color: Colors.white,
+                splashColor: treapAccentColor,
+                shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(8.0),
+                    side: BorderSide(color: treapColor)),
+                height: 50,
+                minWidth: 150,
+                child: Align(
+                  child: Text(
+                    'つみたてタブを開く',
+                    style: Theme.of(context).textTheme.subtitle1.copyWith(
+                          color: treapColor,
+                          fontWeight: FontWeight.bold,
+                        ),
+                  ),
+                ),
+              ),
+            ),
+          ),
+        ],
+      ),
     );
   }
 }

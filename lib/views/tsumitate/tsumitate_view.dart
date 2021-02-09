@@ -23,7 +23,7 @@ class TsumitateView extends StatelessWidget {
                 ),
               ),
               background: Image.asset(
-                user.tickets[0].plan.accommodation.image,
+                user.tickets[0].plan.accommodation.images[0],
                 fit: BoxFit.cover,
               ),
             ),

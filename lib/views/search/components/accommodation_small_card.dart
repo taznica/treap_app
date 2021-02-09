@@ -32,9 +32,12 @@ class AccommodationSmallCard extends StatelessWidget {
               fit: StackFit.expand,
               clipBehavior: Clip.none,
               children: <Widget>[
-                Image.asset(
-                  accommodation.image,
-                  fit: BoxFit.cover,
+                Hero(
+                  tag: accommodation.id,
+                  child: Image.asset(
+                    accommodation.images[0],
+                    fit: BoxFit.cover,
+                  ),
                 ),
                 Padding(
                   padding: const EdgeInsets.all(16.0),
@@ -43,7 +46,7 @@ class AccommodationSmallCard extends StatelessWidget {
                     children: [
                       Text(
                         accommodation
-                            .type, // TODO: accommodation's short description
+                            .area, // TODO: accommodation's short description
                         style: Theme.of(context).textTheme.subtitle1.copyWith(
                               color: Colors.white,
                               fontWeight: FontWeight.bold,
@@ -62,13 +65,13 @@ class AccommodationSmallCard extends StatelessWidget {
                               ),
                         ),
                       ),
-                      Text(
-                        accommodation.address,
-                        style: Theme.of(context).textTheme.headline6.copyWith(
-                              color: Colors.white,
-                              fontWeight: FontWeight.bold,
-                            ),
-                      ),
+                      // Text(
+                      //   accommodation.address,
+                      //   style: Theme.of(context).textTheme.headline6.copyWith(
+                      //         color: Colors.white,
+                      //         fontWeight: FontWeight.bold,
+                      //       ),
+                      // ),
                     ],
                   ),
                 ),
@@ -77,7 +80,11 @@ class AccommodationSmallCard extends StatelessWidget {
                   child: Align(
                     alignment: Alignment.bottomLeft,
                     child: Text(
-                      accommodation.type, // TODO: accommodation's hash tag
+                      '#' +
+                          accommodation.hashtags[0] +
+                          ' #' +
+                          accommodation
+                              .hashtags[1], // TODO: accommodation's hash tag
                       style: Theme.of(context).textTheme.subtitle1.copyWith(
                             color: Colors.white,
                             fontWeight: FontWeight.bold,

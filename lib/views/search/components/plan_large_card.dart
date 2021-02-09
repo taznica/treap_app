@@ -23,7 +23,7 @@ class PlanLargeCard extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Text(
-              plan.title,
+              plan.accommodation.name,
               style: Theme.of(context)
                   .textTheme
                   .headline6
@@ -36,7 +36,7 @@ class PlanLargeCard extends StatelessWidget {
                 child: ClipRRect(
                   borderRadius: BorderRadius.circular(6),
                   child: Image.asset(
-                    plan.image,
+                    plan.accommodation.images[0],
                     height: 240,
                     width: 240,
                     fit: BoxFit.cover,
@@ -45,7 +45,7 @@ class PlanLargeCard extends StatelessWidget {
               ),
             ),
             Text(
-              plan.description,
+              plan.accommodation.description,
               maxLines: 4,
               overflow: TextOverflow.ellipsis,
             ),
@@ -54,7 +54,7 @@ class PlanLargeCard extends StatelessWidget {
               child: Align(
                 alignment: Alignment.centerRight,
                 child: Text(
-                  plan.stringOfPrice(),
+                  plan.accommodation.stringOfPrice(),
                   style: Theme.of(context)
                       .textTheme
                       .subtitle1
