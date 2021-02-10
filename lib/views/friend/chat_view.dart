@@ -4,7 +4,31 @@ import 'package:gohoubi_app/models/message.dart';
 
 import 'glass_museum_article_view.dart';
 
-class ChatView extends StatelessWidget {
+class ChatView extends StatefulWidget {
+  @override
+  _ChatViewState createState() => _ChatViewState();
+}
+
+class _ChatViewState extends State<ChatView> {
+  List<Message> messages = [
+    Message(
+      text: 'あと2ヶ月頑張ろう！',
+      sender: 'friend',
+      icon: 'assets/images/1_friend_eika.png',
+    ),
+    Message(
+      text: '「御宿 かげろう」にあるガラス美術館が人気です！',
+      image: 'assets/images/2_kagerou_glass_1.jpg',
+      sender: 'treap',
+      icon: 'assets/images/treap_logo_icon.png',
+    ),
+    Message(
+      text: 'ここよさそうだね👏',
+      sender: 'friend',
+      icon: 'assets/images/2_friend_moeno.png',
+    ),
+  ];
+
   @override
   Widget build(BuildContext context) {
     TextEditingController controller = TextEditingController();
@@ -194,6 +218,14 @@ class ChatView extends StatelessWidget {
                   FloatingActionButton(
                     onPressed: () {
                       FocusScope.of(context).unfocus();
+                      setState(() {
+                        messages.add(
+                          Message(
+                            text: controller.text,
+                            sender: 'me',
+                          ),
+                        );
+                      });
                       controller.clear();
                     },
                     child: Icon(
