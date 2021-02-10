@@ -18,7 +18,7 @@ class User {
 User user = User(
   id: 0,
   name: 'Aya',
-  image: 'assets/images/person.png',
+  image: 'assets/images/aya.png',
   tickets: [
     Ticket(
       id: 0,
