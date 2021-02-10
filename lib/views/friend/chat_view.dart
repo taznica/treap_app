@@ -49,33 +49,122 @@ class _ChatViewState extends State<ChatView> {
         backgroundColor: Colors.white,
         elevation: 1,
       ),
-      body: Stack(
+      body: Column(
         children: <Widget>[
-          ListView.builder(
-            itemCount: messages.length,
-            shrinkWrap: true,
-            padding: EdgeInsets.only(top: 10, bottom: 10),
-            physics: NeverScrollableScrollPhysics(),
-            itemBuilder: (context, index) {
-              if (messages[index].sender == "friend") {
-                return Container(
-                  padding:
-                      EdgeInsets.only(left: 14, right: 14, top: 10, bottom: 10),
-                  child: Align(
-                    alignment: Alignment.topLeft,
-                    child: Row(
-                      children: [
-                        Padding(
-                          padding: const EdgeInsets.only(right: 8.0),
-                          child: Image.asset(
-                            messages[index].icon,
-                            height: 40,
+          Expanded(
+            child: SingleChildScrollView(
+              child: ListView.builder(
+                itemCount: messages.length,
+                shrinkWrap: true,
+                padding: EdgeInsets.only(top: 10, bottom: 10),
+                physics: NeverScrollableScrollPhysics(),
+                itemBuilder: (context, index) {
+                  if (messages[index].sender == "friend") {
+                    return Container(
+                      padding: EdgeInsets.only(
+                          left: 14, right: 14, top: 10, bottom: 10),
+                      child: Align(
+                        alignment: Alignment.topLeft,
+                        child: Row(
+                          children: [
+                            Padding(
+                              padding: const EdgeInsets.only(right: 8.0),
+                              child: Image.asset(
+                                messages[index].icon,
+                                height: 40,
+                              ),
+                            ),
+                            Container(
+                              decoration: BoxDecoration(
+                                borderRadius: BorderRadius.circular(20),
+                                color: Colors.grey.shade200,
+                              ),
+                              padding: EdgeInsets.all(16),
+                              child: Text(
+                                messages[index].text,
+                                style: TextStyle(fontSize: 15),
+                              ),
+                            ),
+                          ],
+                        ),
+                      ),
+                    );
+                  } else if (messages[index].sender == "treap") {
+                    return GestureDetector(
+                      onTap: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(builder: (context) {
+                            return GlassMuseumArticleView();
+                          }),
+                        );
+                      },
+                      child: Container(
+                        padding: EdgeInsets.only(
+                            left: 10, right: 72, top: 10, bottom: 10),
+                        child: Align(
+                          alignment: Alignment.topLeft,
+                          child: Row(
+                            children: [
+                              Padding(
+                                padding: const EdgeInsets.only(right: 8.0),
+                                child: Image.asset(
+                                  messages[index].icon,
+                                  height: 40,
+                                ),
+                              ),
+                              Flexible(
+                                child: Container(
+                                  decoration: BoxDecoration(
+                                    borderRadius: BorderRadius.circular(20),
+                                    color: Colors.grey.shade200,
+                                  ),
+                                  padding: EdgeInsets.all(16),
+                                  child: Column(
+                                    children: [
+                                      Text(
+                                        messages[index].text,
+                                        style: TextStyle(fontSize: 15),
+                                      ),
+                                      Padding(
+                                        padding: const EdgeInsets.only(
+                                          top: 8.0,
+                                          bottom: 8.0,
+                                        ),
+                                        child: Image.asset(
+                                          messages[index].image,
+                                        ),
+                                      ),
+                                      Align(
+                                        alignment: Alignment.bottomRight,
+                                        child: Text(
+                                          '詳細を見る',
+                                          style: TextStyle(
+                                            fontSize: 15,
+                                            decoration:
+                                                TextDecoration.underline,
+                                          ),
+                                        ),
+                                      )
+                                    ],
+                                  ),
+                                ),
+                              ),
+                            ],
                           ),
                         ),
-                        Container(
+                      ),
+                    );
+                  } else {
+                    return Container(
+                      padding: EdgeInsets.only(
+                          left: 14, right: 14, top: 10, bottom: 10),
+                      child: Align(
+                        alignment: Alignment.topRight,
+                        child: Container(
                           decoration: BoxDecoration(
                             borderRadius: BorderRadius.circular(20),
-                            color: Colors.grey.shade200,
+                            color: treapTransparentColor,
                           ),
                           padding: EdgeInsets.all(16),
                           child: Text(
@@ -83,96 +172,12 @@ class _ChatViewState extends State<ChatView> {
                             style: TextStyle(fontSize: 15),
                           ),
                         ),
-                      ],
-                    ),
-                  ),
-                );
-              } else if (messages[index].sender == "treap") {
-                return GestureDetector(
-                  onTap: () {
-                    Navigator.push(
-                      context,
-                      MaterialPageRoute(builder: (context) {
-                        return GlassMuseumArticleView();
-                      }),
+                      ),
                     );
-                  },
-                  child: Container(
-                    padding: EdgeInsets.only(
-                        left: 10, right: 72, top: 10, bottom: 10),
-                    child: Align(
-                      alignment: Alignment.topLeft,
-                      child: Row(
-                        children: [
-                          Padding(
-                            padding: const EdgeInsets.only(right: 8.0),
-                            child: Image.asset(
-                              messages[index].icon,
-                              height: 40,
-                            ),
-                          ),
-                          Flexible(
-                            child: Container(
-                              decoration: BoxDecoration(
-                                borderRadius: BorderRadius.circular(20),
-                                color: Colors.grey.shade200,
-                              ),
-                              padding: EdgeInsets.all(16),
-                              child: Column(
-                                children: [
-                                  Text(
-                                    messages[index].text,
-                                    style: TextStyle(fontSize: 15),
-                                  ),
-                                  Padding(
-                                    padding: const EdgeInsets.only(
-                                      top: 8.0,
-                                      bottom: 8.0,
-                                    ),
-                                    child: Image.asset(
-                                      messages[index].image,
-                                    ),
-                                  ),
-                                  Align(
-                                    alignment: Alignment.bottomRight,
-                                    child: Text(
-                                      '詳細を見る',
-                                      style: TextStyle(
-                                        fontSize: 15,
-                                        decoration: TextDecoration.underline,
-                                      ),
-                                    ),
-                                  )
-                                ],
-                              ),
-                            ),
-                          ),
-                        ],
-                      ),
-                    ),
-                  ),
-                );
-              } else {
-                return Container(
-                  padding:
-                      EdgeInsets.only(left: 14, right: 14, top: 10, bottom: 10),
-                  child: Align(
-                    alignment: Alignment.topRight,
-                    child: Container(
-                      decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(20),
-                        color: treapTransparentColor,
-                      ),
-                      padding: EdgeInsets.all(16),
-                      child: Text(
-                        messages[index].text,
-                        style: TextStyle(fontSize: 15),
-                      ),
-                    ),
-                  ),
-                );
-              }
-            },
+                  }
+                },
+              ),
+            ),
           ),
           Align(
             alignment: Alignment.bottomLeft,
