@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:gohoubi_app/constants.dart';
 import 'package:gohoubi_app/models/ticket.dart';
 
 class TicketLargeCard extends StatelessWidget {
@@ -14,7 +15,7 @@ class TicketLargeCard extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       decoration: BoxDecoration(
-        border: Border.all(color: Colors.amber),
+        border: Border.all(color: treapColor),
         borderRadius: BorderRadius.circular(6),
       ),
       child: Padding(
@@ -23,14 +24,14 @@ class TicketLargeCard extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Text(
-              ticket.item.shop.name,
+              ticket.plan.accommodation.name,
               style: Theme.of(context)
                   .textTheme
                   .headline6
                   .copyWith(fontWeight: FontWeight.bold),
             ),
             Text(
-              ticket.item.title,
+              ticket.plan.accommodation.name,
               style: Theme.of(context)
                   .textTheme
                   .subtitle1
@@ -43,7 +44,7 @@ class TicketLargeCard extends StatelessWidget {
                 child: ClipRRect(
                   borderRadius: BorderRadius.circular(6),
                   child: Image.asset(
-                    ticket.item.image,
+                    ticket.plan.accommodation.images[0],
                     height: 240,
                     width: 240,
                     fit: BoxFit.cover,
@@ -52,7 +53,7 @@ class TicketLargeCard extends StatelessWidget {
               ),
             ),
             Text(
-              ticket.item.description,
+              ticket.plan.accommodation.description,
               maxLines: 4,
               overflow: TextOverflow.ellipsis,
             ),
@@ -61,7 +62,7 @@ class TicketLargeCard extends StatelessWidget {
               child: Align(
                 alignment: Alignment.centerRight,
                 child: Text(
-                  ticket.item.stringOfPrice(),
+                  ticket.plan.accommodation.stringOfPrice(),
                   style: Theme.of(context)
                       .textTheme
                       .subtitle1

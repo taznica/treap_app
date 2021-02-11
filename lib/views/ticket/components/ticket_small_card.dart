@@ -32,7 +32,7 @@ class TicketSmallCard extends StatelessWidget {
                 child: ClipRRect(
                   borderRadius: BorderRadius.circular(6),
                   child: Image.asset(
-                    ticket.item.image,
+                    ticket.plan.accommodation.images[0],
                     height: 100,
                     width: 100,
                     fit: BoxFit.cover,
@@ -56,7 +56,7 @@ class TicketSmallCard extends StatelessWidget {
                         child: Align(
                           alignment: Alignment.bottomLeft,
                           child: Text(
-                            ticket.item.shop.name,
+                            ticket.plan.accommodation.name,
                             style: Theme.of(context)
                                 .textTheme
                                 .subtitle1
@@ -69,7 +69,7 @@ class TicketSmallCard extends StatelessWidget {
                         child: Align(
                           alignment: Alignment.bottomLeft,
                           child: Text(
-                            ticket.item.title,
+                            ticket.plan.accommodation.name,
                             style: Theme.of(context)
                                 .textTheme
                                 .subtitle2
@@ -80,7 +80,7 @@ class TicketSmallCard extends StatelessWidget {
                       Container(
                         height: 40.0,
                         child: Text(
-                          ticket.item.description,
+                          ticket.plan.accommodation.description,
                           maxLines: 2,
                           overflow: TextOverflow.ellipsis,
                         ),
@@ -89,7 +89,7 @@ class TicketSmallCard extends StatelessWidget {
                         alignment: Alignment.centerRight,
                         height: 24.0,
                         child: Text(
-                          ticket.item.stringOfPrice(),
+                          ticket.plan.accommodation.stringOfPrice(),
                           style: Theme.of(context)
                               .textTheme
                               .bodyText1

@@ -9,8 +9,14 @@ class AccountView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.white,
       body: Padding(
-        padding: const EdgeInsets.all(4.0),
+        padding: const EdgeInsets.only(
+          top: 40.0,
+          bottom: 4.0,
+          left: 4.0,
+          right: 4.0,
+        ),
         child: ListView(
           children: [
             ProfileImage(
