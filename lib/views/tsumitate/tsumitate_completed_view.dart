@@ -2,7 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:gohoubi_app/constants.dart';
 import 'package:gohoubi_app/models/user.dart';
-import 'package:gohoubi_app/views/ticket/components/ticket_use_view.dart';
+import 'package:gohoubi_app/views/tsumitate/ticket_view.dart';
 
 import 'components/progress_card.dart';
 
@@ -75,7 +75,7 @@ class TsumitateCompletedView extends StatelessWidget {
                           context,
                           MaterialPageRoute(
                             builder: (context) {
-                              return TicketUseView();
+                              return TicketView();
                             },
                           ),
                         );

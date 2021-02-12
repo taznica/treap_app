@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:gohoubi_app/constants.dart';
 
-class TicketUseView extends StatelessWidget {
+class TicketView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
