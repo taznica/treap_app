@@ -2,9 +2,10 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:gohoubi_app/constants.dart';
 import 'package:gohoubi_app/models/user.dart';
-import 'package:gohoubi_app/views/tsumitate/ticket_view.dart';
 
 import 'components/progress_card.dart';
+import 'components/tsumitate_sliver_app_bar.dart';
+import 'ticket_view.dart';
 
 class TsumitateCompletedView extends StatelessWidget {
   @override
@@ -12,26 +13,7 @@ class TsumitateCompletedView extends StatelessWidget {
     return Container(
       child: CustomScrollView(
         slivers: <Widget>[
-          SliverAppBar(
-            pinned: true,
-            floating: false,
-            expandedHeight: 300,
-            backgroundColor: Colors.transparent,
-            flexibleSpace: FlexibleSpaceBar(
-              titlePadding: EdgeInsets.only(left: 8.0, bottom: 16.0),
-              title: Text(
-                user.tickets[0].plan.accommodation.name,
-                style: TextStyle(
-                  color: Colors.white,
-                  fontWeight: FontWeight.bold,
-                ),
-              ),
-              background: Image.asset(
-                user.tickets[0].plan.accommodation.images[0],
-                fit: BoxFit.cover,
-              ),
-            ),
-          ),
+          TsumitateSliverAppBar(user: user),
           SliverList(
             delegate: SliverChildListDelegate(
               [

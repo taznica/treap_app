@@ -6,6 +6,7 @@ import 'components/friends_card.dart';
 import 'components/my_rule_achievement_card.dart';
 import 'components/my_rule_history_card.dart';
 import 'components/progress_card.dart';
+import 'components/tsumitate_sliver_app_bar.dart';
 
 class TsumitateView extends StatelessWidget {
   @override
@@ -13,26 +14,7 @@ class TsumitateView extends StatelessWidget {
     return Container(
       child: CustomScrollView(
         slivers: <Widget>[
-          SliverAppBar(
-            pinned: true,
-            floating: false,
-            expandedHeight: 300,
-            backgroundColor: Colors.transparent,
-            flexibleSpace: FlexibleSpaceBar(
-              titlePadding: EdgeInsets.only(left: 8.0, bottom: 16.0),
-              title: Text(
-                user.tickets[0].plan.accommodation.name,
-                style: TextStyle(
-                  color: Colors.white,
-                  fontWeight: FontWeight.bold,
-                ),
-              ),
-              background: Image.asset(
-                user.tickets[0].plan.accommodation.images[0],
-                fit: BoxFit.cover,
-              ),
-            ),
-          ),
+          TsumitateSliverAppBar(user: user),
           SliverList(
             delegate: SliverChildListDelegate(
               [
