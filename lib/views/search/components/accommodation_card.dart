@@ -1,14 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:gohoubi_app/models/accommodation.dart';
 
+import '../accommodation_detail_view.dart';
+
 class AccommodationCard extends StatelessWidget {
   final Accommodation accommodation;
-  final Function press;
 
   const AccommodationCard({
     Key key,
     this.accommodation,
-    this.press,
   }) : super(key: key);
 
   @override
@@ -20,7 +20,19 @@ class AccommodationCard extends StatelessWidget {
         right: 12.0,
       ),
       child: GestureDetector(
-        onTap: press,
+        onTap: () {
+          Navigator.push(
+            context,
+            MaterialPageRoute(
+              builder: (context) {
+                return AccommodationDetailView(
+                  accommodation: accommodation,
+                );
+              },
+              // fullscreenDialog: true,
+            ),
+          );
+        },
         child: Card(
           clipBehavior: Clip.antiAlias,
           shape: RoundedRectangleBorder(

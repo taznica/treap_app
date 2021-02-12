@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:gohoubi_app/models/accommodation.dart';
 
-import 'accommodation_detail_view.dart';
 import 'components/accommodation_card.dart';
 
 class SearchView extends StatelessWidget {
@@ -34,19 +33,6 @@ class SearchView extends StatelessWidget {
             } else {
               return AccommodationCard(
                 accommodation: accommodations[index - 1],
-                press: () {
-                  Navigator.push(
-                    context,
-                    MaterialPageRoute(
-                      builder: (context) {
-                        return AccommodationDetailView(
-                          accommodation: accommodations[index - 1],
-                        );
-                      },
-                      // fullscreenDialog: true,
-                    ),
-                  );
-                },
               );
             }
           }),
