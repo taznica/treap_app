@@ -93,9 +93,11 @@ class _FriendSelectViewState extends State<FriendSelectView> {
               onPressed: () {
                 Navigator.push(
                   context,
-                  MaterialPageRoute(builder: (context) {
-                    return StartView();
-                  }),
+                  MaterialPageRoute(
+                    builder: (context) {
+                      return StartView();
+                    },
+                  ),
                 );
               },
             ),
