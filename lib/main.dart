@@ -32,11 +32,6 @@ class MyApp extends StatelessWidget {
         locale,
       ],
       debugShowCheckedModeBanner: false,
-      // initialRoute: '/',
-      routes: {
-        // '/': (BuildContext context) => HomeTabView(),
-        // '/search': (BuildContext context) => SearchView(),
-      },
       home: HomeTabView(),
     );
   }
