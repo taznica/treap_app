@@ -1,7 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:gohoubi_app/models/accommodation.dart';
 
-import '../accommodation_detail_view.dart';
+import '../../accommodation_detail_view.dart';
+import 'area_text.dart';
+import 'hashtag_text.dart';
+import 'name_text.dart';
 
 class AccommodationCard extends StatelessWidget {
   final Accommodation accommodation;
@@ -56,45 +59,12 @@ class AccommodationCard extends StatelessWidget {
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      Text(
-                        accommodation.area,
-                        style: Theme.of(context).textTheme.subtitle1.copyWith(
-                              color: Colors.white,
-                              fontWeight: FontWeight.bold,
-                            ),
-                      ),
-                      Padding(
-                        padding: const EdgeInsets.only(
-                          top: 8.0,
-                          bottom: 8.0,
-                        ),
-                        child: Text(
-                          accommodation.name,
-                          style: Theme.of(context).textTheme.headline5.copyWith(
-                                color: Colors.white,
-                                fontWeight: FontWeight.bold,
-                              ),
-                        ),
-                      ),
+                      AreaText(text: accommodation.area),
+                      NameText(text: accommodation.name),
                     ],
                   ),
                 ),
-                Padding(
-                  padding: const EdgeInsets.all(16.0),
-                  child: Align(
-                    alignment: Alignment.bottomLeft,
-                    child: Text(
-                      '#' +
-                          accommodation.hashtags[0] +
-                          ' #' +
-                          accommodation.hashtags[1],
-                      style: Theme.of(context).textTheme.subtitle1.copyWith(
-                            color: Colors.white,
-                            fontWeight: FontWeight.bold,
-                          ),
-                    ),
-                  ),
-                ),
+                HashtagText(accommodation: accommodation),
               ],
             ),
           ),
