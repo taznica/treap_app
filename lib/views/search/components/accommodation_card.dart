@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:gohoubi_app/models/accommodation.dart';
 
-class AccommodationSmallCard extends StatelessWidget {
+class AccommodationCard extends StatelessWidget {
   final Accommodation accommodation;
   final Function press;
 
-  const AccommodationSmallCard({
+  const AccommodationCard({
     Key key,
     this.accommodation,
     this.press,

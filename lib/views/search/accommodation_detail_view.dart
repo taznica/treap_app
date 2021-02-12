@@ -6,10 +6,10 @@ import 'package:gohoubi_app/views/search/plan_select_view.dart';
 
 import 'components/accommodation_info.dart';
 
-class AccommodationLargeView extends StatelessWidget {
+class AccommodationDetailView extends StatelessWidget {
   final Accommodation accommodation;
 
-  const AccommodationLargeView({
+  const AccommodationDetailView({
     Key key,
     this.accommodation,
   }) : super(key: key);
