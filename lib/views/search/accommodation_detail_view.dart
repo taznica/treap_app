@@ -4,7 +4,7 @@ import 'package:gohoubi_app/constants.dart';
 import 'package:gohoubi_app/models/accommodation.dart';
 import 'package:gohoubi_app/views/search/plan_select_view.dart';
 
-import 'components/accommodation_info.dart';
+import 'components/accommodation_info/accommodation_info.dart';
 
 class AccommodationDetailView extends StatelessWidget {
   final Accommodation accommodation;
