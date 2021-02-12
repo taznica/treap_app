@@ -1,6 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:gohoubi_app/constants.dart';
+import 'package:gohoubi_app/components/primary_button.dart';
 import 'package:gohoubi_app/models/user.dart';
 
 import 'components/progress_card.dart';
@@ -39,47 +39,18 @@ class TsumitateCompletedView extends StatelessWidget {
                     ),
                   ),
                 ),
-                Padding(
-                  padding: const EdgeInsets.only(
-                    top: 8.0,
-                    bottom: 24.0,
-                    left: 16.0,
-                    right: 16.0,
-                  ),
-                  child: Padding(
-                    padding: const EdgeInsets.only(
-                      left: 64.0,
-                      right: 64.0,
-                    ),
-                    child: FlatButton(
-                      onPressed: () {
-                        Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                            builder: (context) {
-                              return TicketView();
-                            },
-                          ),
-                        );
-                      },
-                      color: treapColor,
-                      splashColor: treapAccentColor,
-                      shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(8.0),
+                PrimaryButton(
+                  title: 'チケットを表示する',
+                  onPressed: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) {
+                          return TicketView();
+                        },
                       ),
-                      height: 50,
-                      minWidth: 200,
-                      child: Align(
-                        child: Text(
-                          'チケットを表示する',
-                          style: Theme.of(context).textTheme.subtitle1.copyWith(
-                                color: Colors.white,
-                                fontWeight: FontWeight.bold,
-                              ),
-                        ),
-                      ),
-                    ),
-                  ),
+                    );
+                  },
                 ),
               ],
             ),

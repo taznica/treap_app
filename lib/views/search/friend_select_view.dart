@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:gohoubi_app/components/primary_button.dart';
 import 'package:gohoubi_app/constants.dart';
 import 'package:gohoubi_app/models/accommodation.dart';
 import 'package:gohoubi_app/models/user.dart';
@@ -87,40 +88,16 @@ class _FriendSelectViewState extends State<FriendSelectView> {
                 ),
               ),
             ),
-            Padding(
-              padding: const EdgeInsets.all(16.0),
-              child: Padding(
-                padding: const EdgeInsets.only(
-                  left: 64.0,
-                  right: 64.0,
-                ),
-                child: FlatButton(
-                  onPressed: () {
-                    Navigator.push(
-                      context,
-                      MaterialPageRoute(builder: (context) {
-                        return StartView();
-                      }),
-                    );
-                  },
-                  color: treapColor,
-                  splashColor: treapAccentColor,
-                  shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(8.0),
-                  ),
-                  height: 50,
-                  minWidth: 200,
-                  child: Align(
-                    child: Text(
-                      '積立を始める',
-                      style: Theme.of(context).textTheme.subtitle1.copyWith(
-                            color: Colors.white,
-                            fontWeight: FontWeight.bold,
-                          ),
-                    ),
-                  ),
-                ),
-              ),
+            PrimaryButton(
+              title: '積立を始める',
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) {
+                    return StartView();
+                  }),
+                );
+              },
             ),
             // Padding(
             //   padding: const EdgeInsets.only(
