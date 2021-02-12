@@ -3,8 +3,8 @@ import 'package:gohoubi_app/models/message.dart';
 
 import '../glass_museum_article_view.dart';
 
-class ChatMessageFromTreap extends StatelessWidget {
-  const ChatMessageFromTreap({
+class MessageBalloonFromTreap extends StatelessWidget {
+  const MessageBalloonFromTreap({
     Key key,
     @required this.messages,
     @required this.index,

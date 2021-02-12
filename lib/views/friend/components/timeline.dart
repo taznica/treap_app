@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:gohoubi_app/models/message.dart';
 
-import 'chat_message_from_friend.dart';
-import 'chat_message_from_me.dart';
-import 'chat_message_from_treap.dart';
+import 'message_balloon_from_friend.dart';
+import 'message_balloon_from_me.dart';
+import 'message_balloon_from_treap.dart';
 
-class ChatTimeline extends StatelessWidget {
-  const ChatTimeline({
+class Timeline extends StatelessWidget {
+  const Timeline({
     Key key,
     @required this.messages,
   }) : super(key: key);
@@ -27,17 +27,17 @@ class ChatTimeline extends StatelessWidget {
           physics: NeverScrollableScrollPhysics(),
           itemBuilder: (context, index) {
             if (messages[index].sender == "friend") {
-              return ChatMessageFromFriend(
+              return MessageBalloonFromFriend(
                 messages: messages,
                 index: index,
               );
             } else if (messages[index].sender == "treap") {
-              return ChatMessageFromTreap(
+              return MessageBalloonFromTreap(
                 messages: messages,
                 index: index,
               );
             } else {
-              return ChatMessageFromMe(
+              return MessageBalloonFromMe(
                 messages: messages,
                 index: index,
               );

@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:gohoubi_app/models/message.dart';
 
-import 'chat_media_button.dart';
-import 'chat_send_button.dart';
-import 'chat_text_field.dart';
+import 'media_button.dart';
+import 'message_field.dart';
+import 'send_button.dart';
 
-class ChatBottomMenu extends StatelessWidget {
-  const ChatBottomMenu({
+class BottomMenu extends StatelessWidget {
+  const BottomMenu({
     Key key,
     @required this.messages,
     @required this.textFieldController,
@@ -32,15 +32,15 @@ class ChatBottomMenu extends StatelessWidget {
         color: Colors.white,
         child: Row(
           children: <Widget>[
-            ChatMediaButton(),
+            MediaButton(),
             SizedBox(
               width: 15,
             ),
-            ChatTextField(controller: textFieldController),
+            MessageField(controller: textFieldController),
             SizedBox(
               width: 15,
             ),
-            ChatSendButton(
+            SendButton(
               onPressed: onTappedSendButton,
             )
           ],

@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:gohoubi_app/constants.dart';
 
-class ChatSendButton extends StatelessWidget {
-  const ChatSendButton({
+class SendButton extends StatelessWidget {
+  const SendButton({
     Key key,
     @required this.onPressed,
   }) : super(key: key);

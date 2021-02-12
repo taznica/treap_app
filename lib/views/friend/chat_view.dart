@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:gohoubi_app/models/message.dart';
 
-import 'components/chat_bottom_menu.dart';
-import 'components/chat_timeline.dart';
+import 'components/bottom_menu.dart';
+import 'components/timeline.dart';
 
 class ChatView extends StatefulWidget {
   @override
@@ -51,8 +51,8 @@ class _ChatViewState extends State<ChatView> {
       ),
       body: Column(
         children: <Widget>[
-          ChatTimeline(messages: messages),
-          ChatBottomMenu(
+          Timeline(messages: messages),
+          BottomMenu(
             messages: messages,
             textFieldController: controller,
             onTappedSendButton: () {

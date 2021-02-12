@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:gohoubi_app/models/message.dart';
 
-class ChatMessageFromFriend extends StatelessWidget {
-  const ChatMessageFromFriend({
+class MessageBalloonFromFriend extends StatelessWidget {
+  const MessageBalloonFromFriend({
     Key key,
     @required this.messages,
     @required this.index,

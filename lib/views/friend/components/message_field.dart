@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-class ChatTextField extends StatelessWidget {
-  const ChatTextField({
+class MessageField extends StatelessWidget {
+  const MessageField({
     Key key,
     @required this.controller,
   }) : super(key: key);

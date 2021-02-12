@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:gohoubi_app/constants.dart';
 
-class ChatMediaButton extends StatelessWidget {
-  const ChatMediaButton({
+class MediaButton extends StatelessWidget {
+  const MediaButton({
     Key key,
   }) : super(key: key);
 
