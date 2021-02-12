@@ -45,8 +45,7 @@ class AccommodationCard extends StatelessWidget {
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       Text(
-                        accommodation
-                            .area, // TODO: accommodation's short description
+                        accommodation.area,
                         style: Theme.of(context).textTheme.subtitle1.copyWith(
                               color: Colors.white,
                               fontWeight: FontWeight.bold,
@@ -76,8 +75,7 @@ class AccommodationCard extends StatelessWidget {
                       '#' +
                           accommodation.hashtags[0] +
                           ' #' +
-                          accommodation
-                              .hashtags[1], // TODO: accommodation's hash tag
+                          accommodation.hashtags[1],
                       style: Theme.of(context).textTheme.subtitle1.copyWith(
                             color: Colors.white,
                             fontWeight: FontWeight.bold,
