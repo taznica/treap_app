@@ -99,46 +99,6 @@ class _FriendSelectViewState extends State<FriendSelectView> {
                 );
               },
             ),
-            // Padding(
-            //   padding: const EdgeInsets.only(
-            //     bottom: 16.0,
-            //     left: 16.0,
-            //     right: 16.0,
-            //   ),
-            //   child: Padding(
-            //     padding: const EdgeInsets.only(
-            //       left: 64.0,
-            //       right: 64.0,
-            //     ),
-            //     child: FlatButton(
-            //       onPressed: () {
-            //         Navigator.push(
-            //           context,
-            //           MaterialPageRoute(builder: (context) {
-            //             return StartView();
-            //           }),
-            //         );
-            //       },
-            //       color: Colors.white,
-            //       splashColor: treapAccentColor,
-            //       shape: RoundedRectangleBorder(
-            //         borderRadius: BorderRadius.circular(8.0),
-            //         side: BorderSide(color: treapColor),
-            //       ),
-            //       height: 50,
-            //       minWidth: 200,
-            //       child: Align(
-            //         child: Text(
-            //           'スキップして積立を始める',
-            //           style: Theme.of(context).textTheme.bodyText2.copyWith(
-            //                 color: treapColor,
-            //                 fontWeight: FontWeight.bold,
-            //               ),
-            //         ),
-            //       ),
-            //     ),
-            //   ),
-            // ),
           ],
         ),
       ),
