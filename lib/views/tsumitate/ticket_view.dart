@@ -19,8 +19,11 @@ class TicketView extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             ClipRRect(
-                borderRadius: BorderRadius.circular(32.0),
-                child: Image.asset('assets/images/sakan_qrcode.png')),
+              borderRadius: BorderRadius.circular(32.0),
+              child: Image.asset(
+                'assets/images/sakan_qrcode.png',
+              ),
+            ),
             Padding(
               padding: const EdgeInsets.only(top: 64.0, bottom: 64.0),
               child: Text(
