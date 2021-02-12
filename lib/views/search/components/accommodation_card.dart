@@ -65,13 +65,6 @@ class AccommodationCard extends StatelessWidget {
                               ),
                         ),
                       ),
-                      // Text(
-                      //   accommodation.address,
-                      //   style: Theme.of(context).textTheme.headline6.copyWith(
-                      //         color: Colors.white,
-                      //         fontWeight: FontWeight.bold,
-                      //       ),
-                      // ),
                     ],
                   ),
                 ),
@@ -96,38 +89,6 @@ class AccommodationCard extends StatelessWidget {
             ),
           ),
         ),
-
-        // child: Row(
-        //   children: <Widget>[
-        //     Padding(
-        //       padding: const EdgeInsets.all(20.0),
-        //       child: ClipRRect(
-        //         borderRadius: BorderRadius.circular(12),
-        //         child: Image.asset(
-        //           accommodation.image,
-        //           height: 150,
-        //           width: 150,
-        //           fit: BoxFit.cover,
-        //         ),
-        //       ),
-        //     ),
-        //     Expanded(
-        //       child: Column(
-        //         crossAxisAlignment: CrossAxisAlignment.start,
-        //         children: <Widget>[
-        //           Text(
-        //             accommodation.name,
-        //             style: Theme.of(context)
-        //                 .textTheme
-        //                 .headline6
-        //                 .copyWith(fontWeight: FontWeight.bold),
-        //           ),
-        //           Text(accommodation.address),
-        //         ],
-        //       ),
-        //     ),
-        //   ],
-        // ),
       ),
     );
   }
