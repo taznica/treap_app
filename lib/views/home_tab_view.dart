@@ -53,7 +53,6 @@ class _HomeTabViewState extends State<HomeTabView> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: views[currentIndex],
-      backgroundColor: Colors.white,
       bottomNavigationBar: BottomNavigationBar(
         currentIndex: currentIndex,
         elevation: 0,

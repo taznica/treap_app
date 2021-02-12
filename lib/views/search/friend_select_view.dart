@@ -41,7 +41,6 @@ class _FriendSelectViewState extends State<FriendSelectView> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.white,
       appBar: AppBar(
         title: Text(
           'フレンドを選ぶ',

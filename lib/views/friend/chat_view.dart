@@ -34,7 +34,6 @@ class _ChatViewState extends State<ChatView> {
     TextEditingController controller = TextEditingController();
 
     return Scaffold(
-      backgroundColor: Colors.white,
       appBar: AppBar(
         title: Text(
           'トーク',
