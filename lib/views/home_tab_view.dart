@@ -1,11 +1,11 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:gohoubi_app/constants.dart';
-import 'package:gohoubi_app/views/tsumitate/tsumitate_completed_view.dart';
 
 import 'account/account_view.dart';
 import 'friend/friend_view.dart';
 import 'search/search_view.dart';
+import 'tsumitate/tsumitate_completed_view.dart';
 
 const List<String> labels = [
   'さがす',
@@ -53,7 +53,6 @@ class _HomeTabViewState extends State<HomeTabView> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: views[currentIndex],
-      backgroundColor: Colors.white,
       bottomNavigationBar: BottomNavigationBar(
         currentIndex: currentIndex,
         elevation: 0,

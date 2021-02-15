@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:gohoubi_app/constants.dart';
 import 'package:gohoubi_app/models/message.dart';
 
-import 'glass_museum_article_view.dart';
+import 'components/bottom_menu.dart';
+import 'components/timeline.dart';
 
 class ChatView extends StatefulWidget {
   @override
@@ -14,18 +14,18 @@ class _ChatViewState extends State<ChatView> {
     Message(
       text: 'あと2ヶ月頑張ろう！',
       sender: 'friend',
-      icon: 'assets/images/1_friend_eika.png',
+      icon: 'assets/images/friends/1_friend_eika.png',
     ),
     Message(
       text: '「御宿 かげろう」にあるガラス美術館が人気です！',
-      image: 'assets/images/2_kagerou_glass_1.jpg',
+      image: 'assets/images/accommodations/2_kagerou_glass_1.jpg',
       sender: 'treap',
       icon: 'assets/images/treap_logo_icon.png',
     ),
     Message(
       text: 'ここよさそうだね👏',
       sender: 'friend',
-      icon: 'assets/images/2_friend_moeno.png',
+      icon: 'assets/images/friends/2_friend_moeno.png',
     ),
   ];
 
@@ -34,7 +34,6 @@ class _ChatViewState extends State<ChatView> {
     TextEditingController controller = TextEditingController();
 
     return Scaffold(
-      backgroundColor: Colors.white,
       appBar: AppBar(
         title: Text(
           'トーク',
@@ -51,200 +50,23 @@ class _ChatViewState extends State<ChatView> {
       ),
       body: Column(
         children: <Widget>[
-          Expanded(
-            child: SingleChildScrollView(
-              child: ListView.builder(
-                itemCount: messages.length,
-                shrinkWrap: true,
-                padding: EdgeInsets.only(top: 10, bottom: 10),
-                physics: NeverScrollableScrollPhysics(),
-                itemBuilder: (context, index) {
-                  if (messages[index].sender == "friend") {
-                    return Container(
-                      padding: EdgeInsets.only(
-                          left: 14, right: 14, top: 10, bottom: 10),
-                      child: Align(
-                        alignment: Alignment.topLeft,
-                        child: Row(
-                          children: [
-                            Padding(
-                              padding: const EdgeInsets.only(right: 8.0),
-                              child: Image.asset(
-                                messages[index].icon,
-                                height: 40,
-                              ),
-                            ),
-                            Container(
-                              decoration: BoxDecoration(
-                                borderRadius: BorderRadius.circular(20),
-                                color: Colors.grey.shade200,
-                              ),
-                              padding: EdgeInsets.all(16),
-                              child: Text(
-                                messages[index].text,
-                                style: TextStyle(fontSize: 15),
-                              ),
-                            ),
-                          ],
-                        ),
-                      ),
-                    );
-                  } else if (messages[index].sender == "treap") {
-                    return GestureDetector(
-                      onTap: () {
-                        Navigator.push(
-                          context,
-                          MaterialPageRoute(builder: (context) {
-                            return GlassMuseumArticleView();
-                          }),
-                        );
-                      },
-                      child: Container(
-                        padding: EdgeInsets.only(
-                            left: 10, right: 72, top: 10, bottom: 10),
-                        child: Align(
-                          alignment: Alignment.topLeft,
-                          child: Row(
-                            children: [
-                              Padding(
-                                padding: const EdgeInsets.only(right: 8.0),
-                                child: Image.asset(
-                                  messages[index].icon,
-                                  height: 40,
-                                ),
-                              ),
-                              Flexible(
-                                child: Container(
-                                  decoration: BoxDecoration(
-                                    borderRadius: BorderRadius.circular(20),
-                                    color: Colors.grey.shade200,
-                                  ),
-                                  padding: EdgeInsets.all(16),
-                                  child: Column(
-                                    children: [
-                                      Text(
-                                        messages[index].text,
-                                        style: TextStyle(fontSize: 15),
-                                      ),
-                                      Padding(
-                                        padding: const EdgeInsets.only(
-                                          top: 8.0,
-                                          bottom: 8.0,
-                                        ),
-                                        child: Image.asset(
-                                          messages[index].image,
-                                        ),
-                                      ),
-                                      Align(
-                                        alignment: Alignment.bottomRight,
-                                        child: Text(
-                                          '詳細を見る',
-                                          style: TextStyle(
-                                            fontSize: 15,
-                                            decoration:
-                                                TextDecoration.underline,
-                                          ),
-                                        ),
-                                      )
-                                    ],
-                                  ),
-                                ),
-                              ),
-                            ],
-                          ),
-                        ),
-                      ),
-                    );
-                  } else {
-                    return Container(
-                      padding: EdgeInsets.only(
-                          left: 14, right: 14, top: 10, bottom: 10),
-                      child: Align(
-                        alignment: Alignment.topRight,
-                        child: Container(
-                          decoration: BoxDecoration(
-                            borderRadius: BorderRadius.circular(20),
-                            color: treapTransparentColor,
-                          ),
-                          padding: EdgeInsets.all(16),
-                          child: Text(
-                            messages[index].text,
-                            style: TextStyle(fontSize: 15),
-                          ),
-                        ),
-                      ),
-                    );
-                  }
-                },
-              ),
-            ),
-          ),
-          Align(
-            alignment: Alignment.bottomLeft,
-            child: Container(
-              padding: EdgeInsets.only(left: 10, bottom: 10, top: 10),
-              height: 60,
-              width: double.infinity,
-              color: Colors.white,
-              child: Row(
-                children: <Widget>[
-                  GestureDetector(
-                    onTap: () {},
-                    child: Container(
-                      height: 30,
-                      width: 30,
-                      decoration: BoxDecoration(
-                        color: treapColor,
-                        borderRadius: BorderRadius.circular(30),
-                      ),
-                      child: Icon(
-                        Icons.add,
-                        color: Colors.white,
-                        size: 20,
-                      ),
-                    ),
+          Timeline(messages: messages),
+          BottomMenu(
+            messages: messages,
+            textFieldController: controller,
+            onTappedSendButton: () {
+              FocusScope.of(context).unfocus();
+              setState(() {
+                messages.add(
+                  Message(
+                    text: controller.text,
+                    sender: 'me',
                   ),
-                  SizedBox(
-                    width: 15,
-                  ),
-                  Expanded(
-                    child: TextField(
-                      controller: controller,
-                      decoration: InputDecoration(
-                        hintText: "Write message...",
-                        hintStyle: TextStyle(color: Colors.black54),
-                        border: InputBorder.none,
-                      ),
-                    ),
-                  ),
-                  SizedBox(
-                    width: 15,
-                  ),
-                  FloatingActionButton(
-                    onPressed: () {
-                      FocusScope.of(context).unfocus();
-                      setState(() {
-                        messages.add(
-                          Message(
-                            text: controller.text,
-                            sender: 'me',
-                          ),
-                        );
-                      });
-                      controller.clear();
-                    },
-                    child: Icon(
-                      Icons.send,
-                      color: Colors.white,
-                      size: 18,
-                    ),
-                    backgroundColor: treapColor,
-                    elevation: 0,
-                  ),
-                ],
-              ),
-            ),
-          ),
+                );
+              });
+              controller.clear();
+            },
+          )
         ],
       ),
     );

@@ -18,7 +18,7 @@ class User {
 User user = User(
   id: 0,
   name: 'Aya',
-  image: 'assets/images/aya.png',
+  image: 'assets/images/me/aya.png',
   tickets: [
     Ticket(
       id: 0,
@@ -32,51 +32,31 @@ List<User> friends = [
   User(
     id: 1,
     name: 'Eika',
-    image: 'assets/images/person.png',
+    image: 'assets/images/friends/1_friend_eika.png',
   ),
   User(
     id: 2,
     name: 'Moeno',
-    image: 'assets/images/person.png',
+    image: 'assets/images/friends/2_friend_moeno.png',
   ),
   User(
     id: 3,
     name: 'Yume',
-    image: 'assets/images/person.png',
+    image: 'assets/images/friends/3_friend_yume.png',
   ),
   User(
     id: 4,
     name: 'Keisuke',
-    image: 'assets/images/person.png',
+    image: 'assets/images/friends/4_friend_keisuke.png',
   ),
   User(
     id: 5,
     name: 'Mirei',
-    image: 'assets/images/person.png',
+    image: 'assets/images/friends/5_friend_mirei.png',
   ),
   User(
     id: 6,
     name: 'Takatoshi',
-    image: 'assets/images/person.png',
+    image: 'assets/images/friends/6_friend_takatoshi.png',
   ),
-  // User(
-  //   id: 7,
-  //   name: 'Takumi',
-  //   image: 'assets/images/person.png',
-  // ),
-  // User(
-  //   id: 8,
-  //   name: 'Ryo',
-  //   image: 'assets/images/person.png',
-  // ),
-  // User(
-  //   id: 9,
-  //   name: 'Ai',
-  //   image: 'assets/images/person.png',
-  // ),
-  // User(
-  //   id: 10,
-  //   name: 'Kumiko',
-  //   image: 'assets/images/person.png',
-  // ),
 ];

@@ -22,7 +22,7 @@ class GlassMuseumArticleView extends StatelessWidget {
                 ),
               ),
               background: Image.asset(
-                'assets/images/2_kagerou_glass_1.jpg',
+                'assets/images/accommodations/2_kagerou_glass_1.jpg',
                 fit: BoxFit.cover,
               ),
             ),
@@ -49,7 +49,7 @@ class GlassMuseumArticleView extends StatelessWidget {
                         child: ClipRRect(
                           borderRadius: BorderRadius.circular(8.0),
                           child: Image.asset(
-                              'assets/images/2_kagerou_glass_0.jpg'),
+                              'assets/images/accommodations/2_kagerou_glass_0.jpg'),
                         ),
                       ),
                       Padding(
@@ -66,7 +66,7 @@ class GlassMuseumArticleView extends StatelessWidget {
                         child: ClipRRect(
                           borderRadius: BorderRadius.circular(8.0),
                           child: Image.asset(
-                              'assets/images/2_kagerou_glass_2.jpg'),
+                              'assets/images/accommodations/2_kagerou_glass_2.jpg'),
                         ),
                       ),
                       Padding(

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:gohoubi_app/components/primary_button.dart';
 import 'package:gohoubi_app/constants.dart';
 import 'package:gohoubi_app/models/accommodation.dart';
 import 'package:gohoubi_app/models/user.dart';
@@ -28,19 +29,18 @@ class _FriendSelectViewState extends State<FriendSelectView> {
     false,
   ];
 
-  List<String> friendPhotos = [
-    'assets/images/1_friend_eika.png',
-    'assets/images/2_friend_moeno.png',
-    'assets/images/3_friend_yume.png',
-    'assets/images/4_friend_keisuke.png',
-    'assets/images/5_friend_mirei.png',
-    'assets/images/6_friend_takatoshi.png',
-  ];
+  // List<String> friendPhotos = [
+  //   'assets/images/1_friend_eika.png',
+  //   'assets/images/2_friend_moeno.png',
+  //   'assets/images/3_friend_yume.png',
+  //   'assets/images/4_friend_keisuke.png',
+  //   'assets/images/5_friend_mirei.png',
+  //   'assets/images/6_friend_takatoshi.png',
+  // ];
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.white,
       appBar: AppBar(
         title: Text(
           'フレンドを選ぶ',
@@ -68,7 +68,7 @@ class _FriendSelectViewState extends State<FriendSelectView> {
                       children: [
                         CheckboxListTile(
                           secondary: Image.asset(
-                            friendPhotos[index],
+                            friends[index].image,
                           ),
                           title: Text(
                             friends[index].name,
@@ -87,81 +87,19 @@ class _FriendSelectViewState extends State<FriendSelectView> {
                 ),
               ),
             ),
-            Padding(
-              padding: const EdgeInsets.all(16.0),
-              child: Padding(
-                padding: const EdgeInsets.only(
-                  left: 64.0,
-                  right: 64.0,
-                ),
-                child: FlatButton(
-                  onPressed: () {
-                    Navigator.push(
-                      context,
-                      MaterialPageRoute(builder: (context) {
-                        return StartView();
-                      }),
-                    );
-                  },
-                  color: treapColor,
-                  splashColor: treapAccentColor,
-                  shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(8.0),
+            PrimaryButton(
+              title: '積立を始める',
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) {
+                      return StartView();
+                    },
                   ),
-                  height: 50,
-                  minWidth: 200,
-                  child: Align(
-                    child: Text(
-                      '積立を始める',
-                      style: Theme.of(context).textTheme.subtitle1.copyWith(
-                            color: Colors.white,
-                            fontWeight: FontWeight.bold,
-                          ),
-                    ),
-                  ),
-                ),
-              ),
+                );
+              },
             ),
-            // Padding(
-            //   padding: const EdgeInsets.only(
-            //     bottom: 16.0,
-            //     left: 16.0,
-            //     right: 16.0,
-            //   ),
-            //   child: Padding(
-            //     padding: const EdgeInsets.only(
-            //       left: 64.0,
-            //       right: 64.0,
-            //     ),
-            //     child: FlatButton(
-            //       onPressed: () {
-            //         Navigator.push(
-            //           context,
-            //           MaterialPageRoute(builder: (context) {
-            //             return StartView();
-            //           }),
-            //         );
-            //       },
-            //       color: Colors.white,
-            //       splashColor: treapAccentColor,
-            //       shape: RoundedRectangleBorder(
-            //         borderRadius: BorderRadius.circular(8.0),
-            //         side: BorderSide(color: treapColor),
-            //       ),
-            //       height: 50,
-            //       minWidth: 200,
-            //       child: Align(
-            //         child: Text(
-            //           'スキップして積立を始める',
-            //           style: Theme.of(context).textTheme.bodyText2.copyWith(
-            //                 color: treapColor,
-            //                 fontWeight: FontWeight.bold,
-            //               ),
-            //         ),
-            //       ),
-            //     ),
-            //   ),
-            // ),
           ],
         ),
       ),
