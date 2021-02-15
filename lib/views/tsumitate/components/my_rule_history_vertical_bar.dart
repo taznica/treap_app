@@ -11,7 +11,7 @@ class MyRuleHistoryVerticalBar extends StatelessWidget {
       top: 35,
       left: 29,
       child: Image.asset(
-        'assets/images/progress_step_bar.png',
+        'assets/images/progress/progress_step_bar.png',
         height: 180,
       ),
     );

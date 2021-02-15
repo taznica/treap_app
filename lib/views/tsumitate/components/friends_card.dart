@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:gohoubi_app/models/user.dart';
 
 import 'card_title.dart';
 import 'friends_list_tile.dart';
@@ -32,16 +33,16 @@ class FriendsCard extends StatelessWidget {
               child: ListView(
                 children: [
                   FriendsListTile(
-                    title: 'Eika',
-                    image: 'assets/images/1_friend_eika.png',
+                    title: friends[1].name,
+                    image: friends[1].image,
                   ),
                   FriendsListTile(
-                    title: 'Moeno',
-                    image: 'assets/images/2_friend_moeno.png',
+                    title: friends[2].name,
+                    image: friends[2].image,
                   ),
                   FriendsListTile(
-                    title: 'Mirei',
-                    image: 'assets/images/5_friend_mirei.png',
+                    title: friends[5].name,
+                    image: friends[5].image,
                   ),
                 ],
               ),

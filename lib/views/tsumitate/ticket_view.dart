@@ -21,7 +21,7 @@ class TicketView extends StatelessWidget {
             ClipRRect(
               borderRadius: BorderRadius.circular(32.0),
               child: Image.asset(
-                'assets/images/sakan_qrcode.png',
+                'assets/images/codes/sakan_qrcode.png',
               ),
             ),
             Padding(

@@ -30,7 +30,7 @@ class MyRuleHistoryListTile extends StatelessWidget {
       leading: Padding(
         padding: const EdgeInsets.only(top: 8.0),
         child: Image.asset(
-          'assets/images/progress_step_icon.png',
+          'assets/images/progress/progress_step_icon.png',
           height: 30,
         ),
       ),

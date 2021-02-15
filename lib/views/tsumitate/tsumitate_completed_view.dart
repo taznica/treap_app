@@ -19,7 +19,7 @@ class TsumitateCompletedView extends StatelessWidget {
               [
                 ProgressCard(
                   totalAmount: 32000,
-                  progressImage: 'assets/images/progress_100.png',
+                  progressImage: 'assets/images/progress/progress_100.png',
                   scheduledDate: '2021/11/3',
                   remainingDays: 2,
                 ),

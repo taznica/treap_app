@@ -20,13 +20,14 @@ class TsumitateView extends StatelessWidget {
               [
                 ProgressCard(
                   totalAmount: 25600,
-                  progressImage: 'assets/images/progress_823.png',
+                  progressImage: 'assets/images/progress/progress_823.png',
                   scheduledDate: '2021/11/3',
                   remainingDays: 80,
                 ),
                 FriendsCard(),
                 MyRuleAchievementCard(
-                    doughnutGraphImage: 'assets/images/progress_myrule.png',
+                    doughnutGraphImage:
+                        'assets/images/progress/progress_myrule.png',
                     rate: 75,
                     days: '21 / 28'),
                 MyRuleHistoryCard(),
