@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:gohoubi_app/constants.dart';
+import 'package:treap_app/constants.dart';
 
 class SendButton extends StatelessWidget {
   const SendButton({

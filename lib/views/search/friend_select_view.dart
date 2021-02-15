@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:gohoubi_app/components/primary_button.dart';
-import 'package:gohoubi_app/constants.dart';
-import 'package:gohoubi_app/models/accommodation.dart';
-import 'package:gohoubi_app/models/user.dart';
-import 'package:gohoubi_app/views/search/start_view.dart';
+import 'package:treap_app/components/primary_button.dart';
+import 'package:treap_app/constants.dart';
+import 'package:treap_app/models/accommodation.dart';
+import 'package:treap_app/models/user.dart';
+import 'package:treap_app/views/search/start_view.dart';
 
 class FriendSelectView extends StatefulWidget {
   const FriendSelectView({

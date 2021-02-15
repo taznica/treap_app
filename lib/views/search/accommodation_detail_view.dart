@@ -1,8 +1,8 @@
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
-import 'package:gohoubi_app/components/primary_button.dart';
-import 'package:gohoubi_app/models/accommodation.dart';
-import 'package:gohoubi_app/views/search/plan_select_view.dart';
+import 'package:treap_app/components/primary_button.dart';
+import 'package:treap_app/models/accommodation.dart';
+import 'package:treap_app/views/search/plan_select_view.dart';
 
 import 'components/accommodation_info/accommodation_info.dart';
 

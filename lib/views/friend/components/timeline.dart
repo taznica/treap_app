@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:gohoubi_app/models/message.dart';
+import 'package:treap_app/models/message.dart';
 
 import 'message_balloon_from_friend.dart';
 import 'message_balloon_from_me.dart';
