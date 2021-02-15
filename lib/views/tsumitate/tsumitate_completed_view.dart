@@ -1,7 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:gohoubi_app/components/primary_button.dart';
-import 'package:gohoubi_app/models/user.dart';
+import 'package:treap_app/components/primary_button.dart';
+import 'package:treap_app/models/user.dart';
 
 import 'components/progress_card.dart';
 import 'components/tsumitate_sliver_app_bar.dart';

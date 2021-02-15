@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:gohoubi_app/models/user.dart';
+import 'package:treap_app/models/user.dart';
 
 class TsumitateSliverAppBar extends StatelessWidget {
   const TsumitateSliverAppBar({

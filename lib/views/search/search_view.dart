@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:gohoubi_app/models/accommodation.dart';
+import 'package:treap_app/models/accommodation.dart';
 
 import 'components/accommodation_card/accommodation_card.dart';
 

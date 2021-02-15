@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:gohoubi_app/constants.dart';
-import 'package:gohoubi_app/models/accommodation.dart';
+import 'package:treap_app/constants.dart';
+import 'package:treap_app/models/accommodation.dart';
 
 import '../friend_select_view.dart';
 

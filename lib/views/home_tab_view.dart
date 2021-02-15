@@ -1,6 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:gohoubi_app/constants.dart';
+import 'package:treap_app/constants.dart';
 
 import 'account/account_view.dart';
 import 'friend/friend_view.dart';

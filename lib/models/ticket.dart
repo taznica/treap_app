@@ -1,4 +1,4 @@
-import 'package:gohoubi_app/models/plan.dart';
+import 'package:treap_app/models/plan.dart';
 
 class Ticket {
   final int id;

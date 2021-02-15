@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:gohoubi_app/models/user.dart';
+import 'package:treap_app/models/user.dart';
 
 import 'components/account_list_tile.dart';
 import 'components/profile_image.dart';

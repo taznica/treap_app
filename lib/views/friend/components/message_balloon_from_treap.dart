@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:gohoubi_app/models/message.dart';
+import 'package:treap_app/models/message.dart';
 
 import '../glass_museum_article_view.dart';
 

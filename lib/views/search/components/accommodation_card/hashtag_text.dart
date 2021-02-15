@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:gohoubi_app/models/accommodation.dart';
+import 'package:treap_app/models/accommodation.dart';
 
 class HashtagText extends StatelessWidget {
   const HashtagText({

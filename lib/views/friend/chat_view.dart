@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:gohoubi_app/models/message.dart';
+import 'package:treap_app/models/message.dart';
 
 import 'components/bottom_menu.dart';
 import 'components/timeline.dart';

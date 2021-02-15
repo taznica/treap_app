@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:gohoubi_app/components/primary_button.dart';
-import 'package:gohoubi_app/models/user.dart';
+import 'package:treap_app/components/primary_button.dart';
+import 'package:treap_app/models/user.dart';
 
 import 'components/friends_card.dart';
 import 'components/my_rule_achievement_card.dart';
