@@ -6,7 +6,6 @@ import 'package:flutter_localizations/flutter_localizations.dart';
 import 'views/home_tab_view.dart';
 
 void main() {
-  SystemChrome.setEnabledSystemUIOverlays([]);
   runApp(MyApp());
 }
 
