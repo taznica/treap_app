@@ -1,5 +1,6 @@
 import 'package:treap_app/models/plan.dart';
 
+import 'accommodation.dart';
 import 'ticket.dart';
 
 class User {
@@ -23,7 +24,11 @@ User user = User(
     Ticket(
       id: 0,
       used: false,
-      plan: plan,
+      plan: Plan(
+        id: 0,
+        term: 6,
+        accommodation: accommodations[2],
+      ),
     ),
   ],
 );

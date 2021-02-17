@@ -10,9 +10,3 @@ class Plan {
     this.accommodation,
   });
 }
-
-Plan plan = Plan(
-  id: 0,
-  term: 6,
-  accommodation: accommodations[2],
-);
